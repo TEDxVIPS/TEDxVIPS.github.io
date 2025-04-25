@@ -1,0 +1,313 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid #EB0028;
+}
+
+.header.scrolled {
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #EB0028;
+    line-height: 1;
+}
+
+/* Style for VIPS text in the header */
+.logo-text .vips {
+    color: #fff;
+    margin-left: 2px;
+    font-weight: 600;
+}
+
+.logo-x {
+    font-size: 0.6em;
+    font-weight: 700;
+    vertical-align: super;
+    margin-left: 1px;
+    color: #EB0028;
+}
+
+.logo-subtext {
+    display: block;
+    font-size: 9px;
+    text-transform: none; /* Remove text-transform: uppercase to allow lowercase */
+    letter-spacing: 1.2px;
+    color: #fff;
+    margin-top: 4px;
+    opacity: 0.8;
+}
+
+.logo-subtext .red-x {
+    color: #EB0028; /* Red color for the "x" */
+    font-weight: 600;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    display: block;
+    padding: 8px 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #EB0028;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover:after,
+.nav-link.active:after {
+    width: 70%;
+}
+
+.register-btn {
+    background-color: #EB0028;
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border: 2px solid #EB0028;
+}
+
+.register-btn:hover {
+    background-color: transparent;
+    color: #EB0028;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Navigation Styles */
+.mobile-only {
+    display: none;
+}
+
+/* The nav overlay that darkens the screen */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 992px) {
+    .header {
+        padding: 10px 0;
+    }
+    
+    .mobile-only {
+        display: block;
+    }
+    
+    .nav-toggle {
+        display: flex;
+        z-index: 1001;
+        position: relative;
+    }
+    
+    .nav-toggle span {
+        transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    }
+    
+    .nav-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: #EB0028;
+    }
+    
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .nav-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: #EB0028;
+    }
+
+    /* Single clear definition for the mobile navigation */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 350px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.96);
+        flex-direction: column;
+        padding: 80px 20px 40px;
+        transition: right 0.4s ease;
+        z-index: 999;
+        overflow-y: auto;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .main-nav.active {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+    
+    .nav-item {
+        margin: 5px 0;
+        width: 100%;
+        opacity: 0;
+        transform: translateX(20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .main-nav.active .nav-item {
+        opacity: 1;
+        transform: translateX(0);
+        transition-delay: 0.2s;
+    }
+    
+    /* Staggered animation for menu items */
+    .main-nav.active .nav-item:nth-child(1) { transition-delay: 0.20s; }
+    .main-nav.active .nav-item:nth-child(2) { transition-delay: 0.25s; }
+    .main-nav.active .nav-item:nth-child(3) { transition-delay: 0.30s; }
+    .main-nav.active .nav-item:nth-child(4) { transition-delay: 0.35s; }
+    .main-nav.active .nav-item:nth-child(5) { transition-delay: 0.40s; }
+    .main-nav.active .nav-item:nth-child(6) { transition-delay: 0.45s; }
+    
+    .nav-link {
+        padding: 12px 15px;
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    
+    .nav-link:after {
+        display: none;
+    }
+    
+    .nav-link:hover, 
+    .nav-link.active {
+        background-color: rgba(235, 0, 40, 0.15);
+        color: #EB0028;
+    }
+    
+    /* Register button in mobile menu */
+    .nav-item.mobile-only {
+        display: none;
+        margin-top: 20px;
+    }
+    
+    .mobile-only .register-btn {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 15px;
+        font-size: 16px;
+    }
+    
+    /* Prevent body scroll when menu is open */
+    body.nav-open {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-wrapper {
+        padding: 0 5px;
+    }
+    
+    .logo-text {
+        font-size: 22px;
+    }
+    
+    .logo-subtext {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+}

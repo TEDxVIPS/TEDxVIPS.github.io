@@ -1,0 +1,302 @@
+.speakers-container {
+    padding: 100px 0;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+
+/* Stylish section title */
+.speakers-container .section-title {
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+.speakers-container .title-accent {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #EB0028;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.speakers-container .section-title h2 {
+    color: #fff;
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.speakers-container .section-subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.7;
+}
+
+/* Redesigned filter buttons */
+.speakers-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    gap: 10px;
+    position: relative;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #EB0028;
+    transition: width 0.3s ease;
+}
+
+.filter-btn:hover, 
+.filter-btn.active {
+    color: #fff;
+}
+
+.filter-btn:hover::after,
+.filter-btn.active::after {
+    width: 100%;
+}
+
+/* Modern speakers grid */
+.speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Redesigned speaker card */
+.speaker-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0; /* Sharp edges for minimal design */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    height: 400px; /* Ensure consistent height */
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a; /* Add a subtle background */
+}
+
+.speaker-image-container {
+    position: relative;
+    height: 100%; /* Image container takes full card height initially */
+    overflow: hidden;
+}
+
+.speaker-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container, cropping if needed */
+    filter: grayscale(100%) contrast(1.1); /* Initial filter */
+    transition: all 0.5s ease; /* Smooth transition for hover effects */
+}
+
+.speaker-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 50%, transparent);
+    padding: 30px 20px 20px;
+    transform: translateY(calc(100% - 80px)); /* Initially show only name/title area */
+    transition: transform 0.4s ease;
+    color: #fff; /* Ensure text is white */
+}
+
+.speaker-name {
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    font-weight: 700;
+    color: #fff;
+}
+
+.speaker-title {
+    color: #EB0028;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.speaker-bio {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    opacity: 0; /* Hide bio initially */
+    transition: opacity 0.3s ease 0.1s; /* Fade in on hover */
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.speaker-social {
+    display: flex;
+    gap: 12px;
+    opacity: 0; /* Hide social links initially */
+    transition: opacity 0.3s ease 0.2s; /* Fade in on hover */
+}
+
+.speaker-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+    font-size: 0.9rem; /* Ensure icons are sized appropriately */
+}
+
+.speaker-social a i { /* Target Font Awesome icons if used */
+    line-height: 1;
+}
+
+/* Speaker card hover effects */
+.speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+.speaker-card:hover .speaker-image {
+    filter: grayscale(30%) contrast(1.1); /* Reduce grayscale on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.speaker-card:hover .speaker-details {
+    transform: translateY(0); /* Reveal full details on hover */
+}
+
+.speaker-card:hover .speaker-bio,
+.speaker-card:hover .speaker-social {
+    opacity: 1; /* Show bio and social links on hover */
+}
+
+/* Featured speaker */
+.speaker-card.featured {
+    grid-column: span 2;
+    height: 500px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .speakers-container {
+        padding: 60px 0;
+    }
+
+    .speaker-card.featured {
+        grid-column: 1 / -1; /* Span all available columns */
+        height: 450px;
+    }
+    
+    .speakers-container .section-title h2 {
+        font-size: 2.5rem;
+    }
+    
+    .speakers-filter {
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        flex: 0 0 auto;
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .speakers-container {
+        padding: 50px 0;
+    }
+    
+    .speakers-container .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .speakers-container .title-accent {
+        font-size: 0.85rem;
+    }
+    
+    .speakers-container .section-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .speakers-grid {
+        gap: 25px;
+        padding: 0 10px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .speaker-card {
+        height: 350px; /* Slightly shorter cards */
+    }
+    
+    .speaker-card.featured {
+        height: 400px;
+    }
+    
+    /* Always show speaker details on mobile - better UX than hover */
+    .speaker-details {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 70%, transparent);
+        padding: 20px 15px 15px;
+    }
+    
+    .speaker-bio, .speaker-social {
+        opacity: 1; /* Always visible */
+    }
+    
+    .speaker-name {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .speakers-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    
+    .filter-btn {
+        margin-bottom: 5px;
+    }
+}
+
+/* Container for the link/button to previous speakers page */
+.previous-speakers-link-container {
+    text-align: center;
+    margin-top: 60px; /* Add space above the button */
+}
+
+/* Style the button using existing btn classes or add specific styles */
+.previous-speakers-link-container .btn {
+    /* You can use existing .btn and .btn-secondary styles */
+    /* Or add specific overrides here if needed */
+    padding: 12px 30px;
+    font-size: 1rem;
+}

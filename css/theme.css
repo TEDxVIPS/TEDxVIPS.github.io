@@ -1,0 +1,215 @@
+:root {
+    /* TEDx colors */
+    --tedx-red: #EB0028;
+    --tedx-dark-red: #c60023;
+    --dark-gray: #333333;
+    --medium-gray: #666666;
+    --light-gray: #f9f9f9;
+    --white: #ffffff;
+    --black: #000000;
+    
+    /* Section backgrounds */
+    --bg-primary: var(--black);
+    --bg-secondary: var(--white);
+    --text-on-dark: var(--white);
+    --text-on-light: var(--black);
+    
+    /* Typography */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Georgia', serif;
+    
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --spacing-xxl: 64px;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-on-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-primary);
+    color: var(--text-on-dark);
+    font-weight: 900;
+    margin-top: 0;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: var(--spacing-md);
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    color: var(--tedx-red);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+a:hover {
+    color: var(--tedx-dark-red);
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+/* Section styling for alternating backgrounds */
+.section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-dark {
+    background-color: var(--bg-primary);
+    color: var(--text-on-dark);
+}
+
+.section-light {
+    background-color: var(--bg-secondary);
+    color: var(--text-on-light);
+}
+
+.section-light h1,
+.section-light h2,
+.section-light h3 {
+    color: var(--black);
+}
+
+/* Button styles with minimal design */
+.btn {
+    display: inline-block;
+    background-color: var(--tedx-red);
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--white);
+    color: var(--tedx-red);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--tedx-red);
+    color: var(--tedx-red);
+}
+
+.btn-secondary:hover {
+    background-color: var(--tedx-red);
+    color: var(--white);
+}
+
+/* Section headers with minimal design */
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: var(--spacing-sm);
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--tedx-red);
+}
+
+.section-title.centered h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-light .section-title h2::after {
+    background-color: var(--tedx-red);
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Grid layouts */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* TEDx signature x-pattern */
+.x-pattern {
+    position: relative;
+}
+
+.x-pattern::before {
+    content: '×';
+    font-size: 2rem;
+    color: var(--tedx-red);
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

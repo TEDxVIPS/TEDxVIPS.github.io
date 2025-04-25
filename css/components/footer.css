@@ -1,0 +1,177 @@
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 60px 0 30px;
+    font-family: var(--font-primary, 'Helvetica Neue', sans-serif);
+    line-height: 1.6;
+    margin-top: 0; /* Ensure no top margin causing a gap */
+    border-top: none; /* Remove any top border */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+/* Footer brand section */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.footer .ted {
+    color: #EB0028;
+}
+
+.footer .x {
+    font-size: 1.2rem;
+    font-weight: 700;
+    vertical-align: super;
+    color: #EB0028;
+}
+
+.footer .vips {
+    color: #fff;
+    margin-left: 2px; /* Reduced from 5px to match header */
+    font-weight: 600;
+}
+
+.footer-tagline {
+    font-size: 0.95rem;
+    margin-top: 0;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Footer links section */
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.footer h4 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    margin-bottom: 10px;
+}
+
+.footer-nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-nav a:hover {
+    color: #EB0028;
+}
+
+.footer-contact p {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Footer bottom section */
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust gap as needed */
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;  /* Slightly larger for better touch targets */
+    height: 40px; /* Slightly larger for better touch targets */
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff; /* Icon color */
+    text-decoration: none; /* Remove underline from icons */
+    transition: all 0.3s ease;
+    font-size: 1rem; /* Control icon size */
+}
+
+/* Style for the <i> elements (Font Awesome icons) */
+.social-links a i {
+    line-height: 1; /* Ensure icon is centered vertically */
+}
+
+.social-links a:hover {
+    background-color: #EB0028;
+    color: #fff; /* Keep icon white on hover */
+    transform: translateY(-3px);
+}
+
+.copyright {
+    text-align: center;
+    opacity: 0.7;
+    font-size: 0.8rem;
+}
+
+.copyright p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-brand {
+        align-items: center;
+    }
+    
+    .footer h4 {
+        text-align: center;
+    }
+    
+    .footer-nav ul {
+        text-align: center;
+    }
+    
+    .footer-contact {
+        text-align: center;
+    }
+}

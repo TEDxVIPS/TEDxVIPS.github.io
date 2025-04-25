@@ -1,0 +1,95 @@
+body {
+    background-color: var(--black); /* Ensure dark background */
+    padding-top: 70px; /* Adjust if header height differs */
+}
+
+.previous-speakers-page main {
+    padding: 60px 0;
+}
+
+.previous-speakers-page .section-title h2 {
+    color: var(--white);
+}
+
+.previous-speakers-page .section-title p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.past-speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust minmax for desired card size */
+    gap: 30px; /* Adjust gap between cards */
+    margin-top: 50px;
+}
+
+.past-speaker-card {
+    background-color: #1a1a1a; /* Dark background for cards */
+    border-radius: 8px;
+    overflow: hidden; /* Ensure image corners are rounded if needed */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.past-speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(235, 0, 40, 0.2); /* Add a subtle red glow on hover */
+}
+
+.past-speaker-image {
+    width: 100%;
+    height: 250px; /* Set a fixed height for the image container */
+    object-fit: cover; /* Scale the image to cover the container, cropping if necessary */
+    object-position: center; /* Center the image within the element's box */
+    display: block; /* Remove extra space below image */
+    transition: transform 0.3s ease; /* Add transition for image hover effect */
+}
+
+.past-speaker-card:hover .past-speaker-image {
+    transform: scale(1.03); /* Slightly zoom image on card hover */
+}
+
+.past-speaker-info {
+    padding: 20px;
+    flex-grow: 1; /* Allow info section to take remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    background-color: #1a1a1a; /* Ensure info background matches card */
+    position: relative; /* Needed if adding elements on top */
+    z-index: 2; /* Ensure info is above the potentially scaled image */
+}
+
+.past-speaker-name {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.past-speaker-year {
+    font-size: 0.9rem;
+    color: #EB0028; /* TEDx Red for the year */
+    font-weight: 500;
+    margin-bottom: 0; /* Remove margin if it's the last element */
+}
+
+.back-link-container {
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .past-speakers-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .past-speaker-image {
+        height: 200px;
+    }
+    .past-speaker-name {
+        font-size: 1.1rem;
+    }
+}

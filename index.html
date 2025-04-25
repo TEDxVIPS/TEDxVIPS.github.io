@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEDx VIPS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/hero.css">
+    <link rel="stylesheet" href="css/components/about.css">
+    <link rel="stylesheet" href="css/components/speakers.css">
+    <link rel="stylesheet" href="css/components/schedule.css">
+    <link rel="stylesheet" href="css/components/contact.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/sponsors.css"> <!-- Add this line -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header"></div>
+
+    <!-- Hero Section -->
+    <section id="hero"></section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Event Details Section -->
+        <section id="event-details" class="section-dark">
+            <div class="container">
+                <div class="event-meta">
+                    <div class="event-date">SEPTEMBER 15, 2023</div>
+                    <div class="event-location">UNIVERSITY AUDITORIUM</div>
+                    <div class="event-time">10:00 AM - 5:00 PM</div>
+                </div>
+                <span class="btn-large">Registration Coming Soon</span>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="section-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About TEDx</h2>
+                </div>
+                <div id="about-content"></div>
+            </div>
+        </section>
+        
+        <!-- Speakers Section -->
+        <section id="speakers" class="section-dark">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Speakers</h2>
+                </div>
+                <div id="speakers-content"></div>
+            </div>
+        </section>
+        
+        <!-- Schedule Section -->
+        <section id="schedule" class="section-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Event Schedule</h2>
+                </div>
+                <div id="schedule-content"></div>
+            </div>
+        </section>
+
+        <!-- Sponsors Section -->
+        <section id="sponsors" class="section-light"> <!-- Adjust class if needed -->
+            <div id="sponsors-content">
+                <!-- Sponsors component will be loaded here -->
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="section-light"> <!-- Ensure this is the last content section before footer -->
+            <div class="container">
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                </div>
+                <div id="contact-content"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/components/header.js"></script>
+    <script src="js/components/hero.js"></script>
+    <script src="js/components/about.js"></script> <!-- Make sure this line is included -->
+    <script src="js/components/speakers.js"></script>
+    <script src="js/components/schedule.js"></script>
+    <!-- No specific JS needed for sponsors unless interactions are added -->
+    <script src="js/components/contact.js"></script>
+    <script src="js/components/footer.js"></script>
+</body>
+</html>

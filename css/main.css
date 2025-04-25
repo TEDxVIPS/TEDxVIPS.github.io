@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #000;
+    padding-top: 70px; /* Keep this for fixed header */
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+
+/* Container styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header specific styles */
+.header {
+    background: transparent;
+    color: #fff;
+}
+
+/* Footer styles */
+.footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.hero .content {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Section styling */
+section {
+    scroll-margin-top: 80px;
+    position: relative;
+    padding: 80px 0; /* Reduced default padding */
+    overflow: hidden;
+    border-top: none; /* Remove transparent border that might be causing the strip */
+    margin: 0;
+}
+
+/* Remove hero and first section border */
+#hero::after {
+    display: none;
+}
+
+/* Adjust the section alternating style */
+section:nth-of-type(odd) {
+    background-color: #000;
+    color: #fff;
+}
+
+section:nth-of-type(even) {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Headers in light sections */
+section:nth-of-type(even) h1,
+section:nth-of-type(even) h2,
+section:nth-of-type(even) h3 {
+    color: #000;
+}
+
+/* Remove the gap between sections specifically */
+#schedule {
+    padding-bottom: 0;
+}
+
+#contact {
+    padding-top: 0;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+    font-size: 0;
+}
+
+/* Remove any other potential dividers */
+section::before,
+section::after {
+    display: none;
+}
+
+/* Footer adjustments to remove gap */
+#footer {
+    margin-top: -1px !important; /* Negative margin to pull up footer */
+    background-color: #111 !important; /* Ensure the footer background color */
+    border: none !important; /* Ensure no borders */
+}
+
+/* Event details section */
+.event-meta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* Event details section styling */
+#event-details {
+    background-color: #000; 
+    /* Remove this negative margin */
+    padding-top: 30px; 
+    border-top: none; 
+    position: relative;
+    z-index: 5; 
+}
+
+.event-date, .event-location, .event-time {
+    font-weight: 700;
+}
+
+.btn-large {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    padding: 18px 20px;
+    background-color: #EB0028;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-large:hover {
+    background-color: #fff;
+    color: #EB0028;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Text alignment styles */
+.text-center {
+    text-align: center;
+}
+
+.lead {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Reduced padding for mobile header height */
+    }
+    
+    section {
+        padding: 40px 0; /* Reduced mobile section padding */
+        margin: 0;
+    }
+    
+    .event-meta {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 30px;
+        font-size: 1rem; /* Slightly smaller font */
+        text-align: center; /* Center align text on mobile */
+    }
+    
+    .btn-large {
+        width: 90%; /* Wider buttons on mobile */
+        max-width: 280px;
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+    
+    .container {
+        width: 95%; /* More width on mobile */
+        padding: 0 10px;
+    }
+    
+    h1 {
+        font-size: 2.3rem; /* Smaller heading size */
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Adjust spacing between sections */
+    #event-details {
+        padding-top: 20px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    section {
+        padding: 30px 0; /* Further reduced padding */
+    }
+    
+    .btn-large {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+}
