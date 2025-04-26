@@ -110,7 +110,8 @@
 .speaker-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the container, cropping if needed */
+    object-fit: cover; /* Scale the image to cover the container, cropping if necessary */
+    object-position: center center; /* Center the image vertically and horizontally */
     filter: grayscale(100%) contrast(1.1); /* Initial filter */
     transition: all 0.5s ease; /* Smooth transition for hover effects */
 }
@@ -198,8 +199,10 @@
 
 /* Featured speaker */
 .speaker-card.featured {
-    grid-column: span 2;
-    height: 500px;
+    /* Remove or comment out these lines */
+    /* grid-column: span 2; */
+    /* height: 500px; */
+    /* Add any other specific featured styles if needed, but not size-related */
 }
 
 /* Responsive styles */
@@ -209,8 +212,9 @@
     }
 
     .speaker-card.featured {
-        grid-column: 1 / -1; /* Span all available columns */
-        height: 450px;
+        /* Remove or comment out these lines */
+        /* grid-column: 1 / -1; */ /* Span all available columns */
+        /* height: 450px; */
     }
     
     .speakers-container .section-title h2 {
@@ -254,12 +258,13 @@
     }
     
     .speaker-card {
-        height: 350px; /* Slightly shorter cards */
+        height: 420px; /* Increased height for mobile */
     }
     
-    .speaker-card.featured {
-        height: 400px;
-    }
+    /* Remove the featured height override if it exists, or ensure it doesn't conflict */
+    /* .speaker-card.featured { */
+        /* height: 400px; */ /* Removed this line */
+    /* } */
     
     /* Always show speaker details on mobile - better UX than hover */
     .speaker-details {

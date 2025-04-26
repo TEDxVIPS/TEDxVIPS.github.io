@@ -1,84 +1,434 @@
 const speakers = [
+    // --- Speakers from 2024 ---
     {
-        name: "Priya Agarwal",
-        title: "Digital Health Pioneer",
-        bio: "Transforming healthcare accessibility through innovative technology solutions for underserved communities.",
-        image: "assets/images/speakers/priya-agarwal.jpg",
-        featured: false,
-        topics: ["technology", "society"],
+        name: "Abhishek Kar",
+        title: "Senior Research Scientist, Meta", // Updated title
+        bio: "Kar is a Senior Research Scientist at Meta, specializing in 3D vision and AR. He previously worked at Google AR and holds a Ph.D. from UC Berkeley.", // Updated bio
+        image: "assets/images/SPEAKERS 24/ABHISHEK KAR - 2024.png",
+        featured: false, 
+        topics: [], 
+        year: 2024,
         socialLinks: {
-            twitter: "https://twitter.com/priyaagarwal",
-            linkedin: "https://linkedin.com/in/priyaagarwal"
+            linkedin: "https://www.linkedin.com/in/abhishekkar?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            instagram: "https://www.instagram.com/abhishekkarofficial?igsh=eTRieXZ5d2ZvbTEy" // Added Instagram
         }
     },
     {
-        name: "James Wilson",
-        title: "Sustainable Architecture Expert",
-        bio: "Creating revolutionary building designs that minimize environmental impact while maximizing functionality and beauty.",
-        image: "", // Empty to use placeholder
-        featured: false,
-        topics: ["environment"],
+        name: "Apara Mehta",
+        title: "Veteran Actress", 
+        bio: "Apara Mehta is a veteran Indian actress known for her iconic role in Kyunki Saas Bhi Kabhi Bahu Thi. She has had a long-standing career in TV, film, and theatre.", // Updated bio
+        image: "assets/images/SPEAKERS 24/APARA MEHTA - 2024.png",
+        featured: true, 
+        topics: [],
+        year: 2024,
         socialLinks: {
-            twitter: "https://twitter.com/jameswilson",
-            linkedin: "https://linkedin.com/in/jameswilson"
+            instagram: "https://www.instagram.com/aparamehta?igsh=dWFzYW02OHNzMW9z" // Added Instagram
         }
     },
     {
-        name: "Elena Rodriguez",
-        title: "Quantum Computing Researcher",
-        bio: "Breaking new ground in quantum computing applications that could revolutionize medicine, encryption, and artificial intelligence.",
-        image: "assets/images/speakers/elena-rodriguez.jpg",
-        featured: false,
-        topics: ["technology"],
+        name: "Kuljeet Singh",
+        title: "Actor, Author & Director", // Updated title
+        bio: "Kuljeet Singh is an Indian actor, author, and director, known for his roles in Margarita with a Straw and Sardar Udham. He is the founder of Atelier Theatre and an Assistant Professor at the University of Delhi.", // Updated bio
+        image: "assets/images/SPEAKERS 24/KULJEET SINGH - 2024.png",
+        featured: false, 
+        topics: [],
+        year: 2024,
         socialLinks: {
-            twitter: "https://twitter.com/elenarodriguez",
-            linkedin: "https://linkedin.com/in/elenarodriguez"
+            instagram: "https://www.instagram.com/kuljeetsinghatelier?igsh=MWcydHNxNzcxcmVjag==" // Added Instagram
         }
     },
     {
-        name: "Aisha Khan",
-        title: "Renewable Energy Advocate",
-        bio: "Championing the transition to clean energy sources through policy reform and community-based initiatives.",
-        image: "assets/images/speakers/aisha-khan.jpg", // Example image path
-        featured: false,
-        topics: ["environment", "society"],
+        name: "Shams Aalam",
+        title: "Para Swimmer & Advocate", 
+        bio: "Shams Aalam is an Indian para swimmer and disability rights advocate who set a world record by swimming 13 km in the Ganga River. A former national karate champion, he turned to swimming after a spinal injury and now holds multiple national records.", // Updated bio
+        image: "assets/images/SPEAKERS 24/SHAMS AALAM - 2024.png",
+        featured: false, 
+        topics: [],
+        year: 2024,
         socialLinks: {
-            linkedin: "https://linkedin.com/in/aishakhan"
+            linkedin: "https://www.linkedin.com/in/shams-aalam-96a15049?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            instagram: "https://www.instagram.com/iamshamsaalam?igsh=MWkyN2w1cHFiZ3RlaQ==" // Added Instagram
         }
     },
     {
-        name: "Ben Carter",
-        title: "Creative Technologist",
-        bio: "Exploring the intersection of art, design, and technology to create immersive and interactive experiences.",
-        image: "", // Use placeholder
-        featured: false,
-        topics: ["technology"],
+        name: "Vidisha Baliyan",
+        title: "Miss Deaf World 2019 & Tennis Player", 
+        bio: "Vidisha Baliyan is the first Indian to win the Miss Deaf World title in 2019. A former national-level tennis player and disability rights advocate, she also founded the Spandan Welfare Society.", // Updated bio
+        image: "assets/images/SPEAKERS 24/VIDISHA BALIYAN - 2024.png",
+        featured: false, 
+        topics: [],
+        year: 2024,
         socialLinks: {
-            twitter: "https://twitter.com/bencarter",
+            linkedin: "https://www.linkedin.com/in/vidisha-baliyan-b92959189?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            instagram: "https://www.instagram.com/vidisha_baliyan?igsh=MWs4aDlvY3B5bGg5ZA==" // Added Instagram
         }
     },
-    // --- New Speaker Added Below ---
     {
-        name: "Dr. Lena Petrova",
-        title: "Neuroscience Communicator",
-        bio: "Making complex brain science accessible and engaging, exploring topics like memory, learning, and cognitive biases.",
-        image: "assets/images/speakers/lena-petrova.jpg", // Example image path
-        featured: false,
-        topics: ["society"],
+        // Assuming this is Dr. Vijender Singh Chauhan based on the prompt
+        name: "Vijender Chauhan", 
+        title: "Associate Professor & UPSC Mentor", // Updated title
+        bio: "Dr. Vijender Singh Chauhan an Associate Professor at Zakir Husain Delhi College and a renowned UPSC mock interview expert. Known for his insightful guidance, he has mentored aspirants for over two decades.", // Updated bio
+        image: "assets/images/SPEAKERS 24/VIJENDER CHAUHAN - 2024.png",
+        featured: true, 
+        topics: [],
+        year: 2024,
         socialLinks: {
-            linkedin: "https://linkedin.com/in/lenapetrova",
-            twitter: "https://twitter.com/drlenapetrova"
+            linkedin: "https://www.linkedin.com/in/vijendermasijeevi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        }
+    },
+    {
+        name: "Vikas Swaroop",
+        title: "Diplomat & Author", 
+        bio: "Vikas Swarup is a former Indian diplomat and author of Q & A, which inspired Slumdog Millionaire. He also served as India’s High Commissioner to Canada.", // Updated bio
+        image: "assets/images/SPEAKERS 24/VIKAS SWAROOP - 2024.png",
+        featured: false, 
+        topics: [],
+        year: 2024,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/vikas-swarup-184703213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        }
+    },
+    // --- Speakers from 2021 ---
+    {
+        name: "Aman Dhattarwal",
+        title: "Educator & Entrepreneur",
+        bio: "Aman Dhattarwal is a prominent Indian educator, entrepreneur, and YouTuber, best known for founding Apna College, a free educational platform aimed at providing quality academic resources to students. He has also launched a 50-day coding challenge to inspire students to develop practical skills.", // Updated bio
+        image: "assets/images/SPEAKERS 21/AMAN DHATTARWAL 2021.png",
+        featured: true, 
+        topics: [], 
+        year: 2021,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/dhattarwalaman?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAAChh8AYBRbWO97Pch1zFK_M7fQXMaQNQvMU&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bt86DzRGLQ%2FuxJ01QQNCfnA%3D%3D",
+            youtube: "https://youtu.be/Y7qzo1WMcxs?si=x788xvd0KoW_L4vm" // Added YouTube
+        }
+    },
+    {
+        name: "Anurag Mishra",
+        title: "Storyteller & Podcaster", // Updated title
+        bio: "Anurag Mishra is a TEDx speaker, public speaker, and host of the Travelling Inwards with Anurag Mishra podcast, where he explores topics like mental health, spirituality, and personal growth. Known for his creativity, observational skills, and ability to execute unique ideas, he also serves as a pillar in the Here For You community, promoting kindness and humanity.", // Updated bio
+        image: "assets/images/SPEAKERS 21/ANURAG MISHRA - 2021.png",
+        featured: false,
+        topics: [],
+        year: 2021,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/anuragmishra11/overlay/about-this-profile/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BEBfsd9RgQLe15GQ2EnuUNg%3D%3D",
+            youtube: "https://youtu.be/BL1MuwfGvE0?si=LJ7knY-vjVLOa2e2" // Added YouTube
+        }
+    },
+    {
+        name: "Chiman Singh Yadav",
+        title: "Maha Vir Chakra Recipient", // Updated title
+        bio: "Chiman Singh Yadav is a retired Indian Navy sailor and the first below-officer rank to be awarded the Maha Vir Chakra for his bravery during the 1971 Indo-Pakistani War. He is recognized for rescuing fellow sailors under enemy fire and training Mukti Bahini fighters. His legacy is honored through the naming of the Chiman Singh Block at the Southern Naval Command in Kochi.", // Updated bio
+        image: "assets/images/SPEAKERS 21/CHIMAN SINGH YADAV - 2021.png",
+        featured: false,
+        topics: [],
+        year: 2021,
+        socialLinks: {
+            profile: "https://gallantryawards.gov.in/assets/uploads/styles/awardee_img/public/sites/default/files/MVC_ChimanSingh-2023-09-27-0303-09092.pdf" // Added Profile link
+        }
+    },
+    {
+        name: "Neha Arora",
+        title: "Founder, Planet Abled", // Updated title
+        bio: "Neha Arora is the founder of Planet Abled, an inclusive travel company that provides accessible travel solutions for people with disabilities and the elderly. She has been recognized with several awards, including the NCPEDP MphasiS Universal Design Award, for her efforts in making travel inclusive. Neha is also a Global Good Fund Fellow and an advocate for diversity in the travel industry.", // Updated bio
+        image: "assets/images/SPEAKERS 21/NEHA ARORA - 2021.png",
+        featured: false,
+        topics: [],
+        year: 2021,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/nehaaroraplanetabled?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAAAIdlJEBK4SlKdgtKcEA5VicaoB4sktMI1U&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bt86DzRGLQ%2FuxJ01QQNCfnA%3D%3D",
+            youtube: "https://youtu.be/rAX6D9xQRi8?si=Vp7q5uUm6Ac0Yeb_" // Added YouTube
+        }
+    },
+    {
+        name: "Priyal Keni",
+        title: "Sport Shooter & MBA", // Updated title
+        bio: "Priyal Keni is an accomplished athlete and MBA graduate from London Business School. She has represented India in rifle shooting for over seven years, earning more than 110 medals, and was honored with the Shiv Chatrapati Award in 2015.", // Updated bio
+        image: "assets/images/SPEAKERS 21/PRIYAL KENI - 2021.png",
+        featured: false,
+        topics: [],
+        year: 2021,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/priyalkeni?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAACxxKHwB3R6OFZNYrPrWXqJc-F8EUiDgvvc&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bt86DzRGLQ%2FuxJ01QQNCfnA%3D%3D",
+            youtube: "https://youtu.be/AULIfewxJX8?si=pGA0gs8xCoh05zU1" // Added YouTube
+        }
+    },
+    {
+        name: "Radhika Sharma",
+        title: "Travel Content Creator", // Updated title
+        bio: "Radhika Sharma, also known as Radhika Nomllers, is a travel content creator with over 317,000 YouTube subscribers. She shares her global adventures, including activities like skiing and scuba diving.", // Updated bio
+        image: "assets/images/SPEAKERS 21/RADHIKA SHARMA - 2021.png",
+        featured: false,
+        topics: [],
+        year: 2021,
+        socialLinks: {
+            instagram: "https://www.instagram.com/radhika_nomllers?igsh=MXUwZmdnZjYxbXVubg%3D%3D&utm_source=qr",
+            youtube: "https://youtu.be/N1dS84A1YGE?si=dS8VomcD7RcQ50ho" // Added YouTube
+        }
+    },
+    {
+        name: "Ronit Ranjan",
+        title: "Emotional Well-being Coach & Author", // Updated title
+        bio: "Ronit Ranjan is an Emotional Well-being Coach & Corporate Trainer, Entrepreneur, 5X TEDx speaker, Ex-Indian Army Cadet, and Author of 'The Mighty Mustang’. He's the youngest person in the world to walk from Kanyakumari to Kashmir.", // Updated bio
+        image: "assets/images/SPEAKERS 21/RONIT RANJAN - 2021.png",
+        featured: false,
+        topics: [],
+        year: 2021,
+        socialLinks: {
+            linkedin: "https://in.linkedin.com/in/ronitranjan-coach",
+            youtube: "https://youtu.be/MnZaDY-Wx50?si=_Zexzr88vP06Tr7C" // Added YouTube
+        }
+    },
+    {
+        name: "Sajan Sachdeva",
+        title: "Category Manager & Advocate", // Updated title
+        bio: "Sajan Sachdeva is a Category Manager at Amazon and an advocate for disability inclusion. Despite losing both legs to an electric shock at the age of nine, he has excelled in his career and is recognized for his resilience and contributions to workplace inclusion.", // Updated bio
+        image: "assets/images/SPEAKERS 21/SAJAN SACHDEVA - 2021.png",
+        featured: false,
+        topics: [],
+        year: 2021,
+        socialLinks: {
+            instagram: "https://www.instagram.com/sajansachdeva/",
+            youtube: "https://youtu.be/WYEjKByeJYg?si=MqPWpAc7h38dWN6C" // Added YouTube
+        }
+    },
+    {
+        name: "Shreyas Mehndiratta",
+        title: "Influencer & Content Creator", // Updated title
+        bio: "Shreyas Mehndiratta is a Delhi-based influencer and digital content creator, recognized for his humorous and relatable Instagram reels. He gained popularity in 2020 for his witty content, which resonated with a wide audience.", // Updated bio
+        image: "assets/images/SPEAKERS 21/SHREYAS MEHNDIRATTA - 2021.png",
+        featured: false,
+        topics: [],
+        year: 2021,
+        socialLinks: {
+            instagram: "https://www.instagram.com/shreyasmendiratta/?hl=en",
+            youtube: "https://youtu.be/bwTvWaYXVh4?si=f4f2NaQkJpgOMPf1" // Added YouTube
+        }
+    },
+    // --- Speakers from 2022 ---
+    {
+        name: "Dr. Sidharth Warrier",
+        title: "Neurologist & Science Communicator",
+        bio: "Dr. Siddharth Warrier is a Mumbai-based neurologist, public speaker, and content creator who specializes in making neuroscience accessible to the public. He is known for his work on mental health, mindfulness, and behavior change through his YouTube channel and live workshops.", // Updated bio
+        image: "assets/images/SPEAKERS 22/Dr. SIDHARTH WARRIER - 2022.png",
+        featured: false,
+        topics: [], 
+        year: 2022,
+        socialLinks: {
+            linkedin: "https://in.linkedin.com/in/sidwarrier22288",
+            youtube: "https://youtu.be/lw1jkcxF0SI?si=jSP1J6mT3YjXWyej" // Added YouTube
+        }
+    },
+    {
+        name: "Harteerath Singh",
+        title: "Director, Hemkunt Foundation", // Updated title
+        bio: "Harteerath Singh Ahluwalia is the Director of Hemkunt Foundation, a prominent NGO recognized for its humanitarian efforts across India. He has been honored with accolades such as Forbes 30 Under 30, Hindustan Times 30 Under 30, and Grazia’s Social Activist of the Year. Under his leadership, the foundation has impacted over 4.9 million lives through initiatives like COVID-19 relief, disaster response, and education programs.", // Updated bio
+        image: "assets/images/SPEAKERS 22/HARTEERATH SINGH - 2022.png",
+        featured: false,
+        topics: [],
+        year: 2022,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/harteerath-singh-616948202?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADPAyXIBea9CM-y-yg7AwQlgS4UmYGMuVZo&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B9hRrA7rETjqvPBKyjsNTkQ%3D%3D",
+            youtube: "https://youtu.be/a5cdMaca230?si=ulTVUnx2xUMBw4lU" // Added YouTube
+        }
+    },
+    {
+        name: "Maj. Vivek Jacob",
+        title: "Founder, C.L.A.W. Global", // Updated title
+        bio: "Major Vivek Jacob is a former Indian Special Forces officer and founder of C.L.A.W. Global, which empowers people with disabilities through adventure sports. After a spinal injury ended his military career, he led initiatives like Operation Blue Freedom, including the world’s first Siachen trek by specially-abled individuals.", // Updated bio
+        image: "assets/images/SPEAKERS 22/MAJ. VIVEK JACOB - 2022.png",
+        featured: false,
+        topics: [],
+        year: 2022,
+        socialLinks: {
+            instagram: "https://www.instagram.com/mj_spiritroads/?hl=en",
+            youtube: "https://youtu.be/54QKU7QZ9rI?si=wiVMVUCwueFNzGB8" // Added YouTube
+        }
+    },
+    {
+        name: "Piyush Mishra",
+        title: "Actor, Poet & Musician",
+        bio: "Piyush Mishra is an acclaimed actor, lyricist, singer, and playwright. He won the Zee Cine Award for Best Dialogue for The Legend of Bhagat Singh (2003) and the Stardust Award for Music Director for Gulaal (2010). His musical ensemble, Ballimaaraan, is also well-known.", // Updated bio
+        image: "assets/images/SPEAKERS 22/PIYUSH MISHRA - 2022.png",
+        featured: false,
+        topics: [],
+        year: 2022,
+        socialLinks: {
+            instagram: "https://www.instagram.com/officialpiyushmishra/?hl=en",
+            youtube: "https://youtu.be/qQu8qfSBWWg?si=CKN7EZ0fw1hvyIcM" // Added YouTube
+        }
+    },
+    {
+        name: "Shaheen Malik",
+        title: "Founder, Brave Souls Foundation", // Updated title
+        bio: "Shaheen Malik is an acid attack survivor and the founder of Brave Souls Foundation, a Delhi-based NGO established in 2021. Since surviving an attack in 2009, she has dedicated her life to supporting over 300 survivors through medical care, legal aid, and rehabilitation initiatives like the shelter home Apna Ghar.", // Updated bio
+        image: "assets/images/SPEAKERS 22/SHAHEEN MALIK - 2022.png",
+        featured: false,
+        topics: [],
+        year: 2022,
+        socialLinks: {
+            linkedin: "https://in.linkedin.com/in/shaheenmalik10"
+        }
+    },
+    {
+        name: "Shree Amogh Leela",
+        title: "Spiritual Guide",
+        bio: "Amogh Lila Das is a prominent ISKCON leader and spiritual guide, known for his motivational talks and engaging spiritual discourses. He transitioned from a successful corporate career to dedicate his life to spreading Vedic wisdom and values, with a significant following on his YouTube channel Reviving Values.", // Updated bio
+        image: "assets/images/SPEAKERS 22/SHREE AMOGH LEELA - 2022.png",
+        featured: true, 
+        topics: [],
+        year: 2022,
+        socialLinks: {
+            instagram: "https://www.instagram.com/official.amoghliladas/?hl=en",
+            youtube: "https://youtu.be/mowwOshbM18?si=8u5hyM0f7-mIT9dk" // Added YouTube
+        }
+    },
+    {
+        name: "Sonal Goel",
+        title: "IAS Officer & Author", // Updated title
+        bio: "Sonal Goel is a 2008-batch Indian Administrative Service (IAS) officer, currently serving as the Resident Commissioner of Tripura Bhavan in New Delhi. She secured an All India Rank of 13 in the Civil Services Examination. Recognized among the \"Top 25 Women Transforming India\" by NITI Aayog, Sonal is also a TEDx speaker and author of the book Nation Calling.", // Updated bio
+        image: "assets/images/SPEAKERS 22/SONAL GOEL - 2022.png",
+        featured: false,
+        topics: [],
+        year: 2022,
+        socialLinks: {
+            instagram: "https://www.instagram.com/iassonalgoel/?hl=en" // Added Instagram
+        }
+    },
+    {
+        name: "Ujjwal Kumar",
+        title: "Percussionist & Designer", // Updated title
+        bio: "Ujjwal Kumar is a Delhi-based Indian percussionist known for fusing traditional instruments like the Ghatam with modern sounds. He’s gained popularity for his “Ghatam Mixes” and is also a designer, balancing his music career with a UX role at Spinny.", // Updated bio
+        image: "assets/images/SPEAKERS 22/UJJWAL KUMAR - 2022.png",
+        featured: false,
+        topics: [],
+        year: 2022,
+        socialLinks: {
+            instagram: "https://www.instagram.com/ujjwallive/?hl=en",
+            youtube: "https://youtu.be/wM0SI-rzTLU?si=TijHgrp0zeHTVfs3" // Added YouTube
+        }
+    },
+    // --- Speakers from 2023 ---
+    {
+        name: "Akhilendra Mishra",
+        title: "Actor, Author & Poet", // Updated title
+        bio: "Akhilendra Mishra is a veteran Indian actor acclaimed for his roles in Chandrakanta, Lagaan, and Sarfarosh. He is also an author, poet, and playwright, actively contributing to theatre and literature.", // Updated bio
+        image: "assets/images/SPEAKERS 23/AKHILENDRA MISHRA - 2023.png",
+        featured: true, 
+        topics: [], 
+        year: 2023,
+        socialLinks: {
+            instagram: "https://www.instagram.com/akhilendram?igsh=eXo2azBhd2g2czA=" // Added Instagram
+        }
+    },
+    {
+        name: "Ashu Ghai",
+        title: "Founder, Science and Fun", // Updated title
+        bio: "Ashu Ghai is the founder of Science and Fun, a popular YouTube channel making science engaging and accessible. A TEDx speaker, he inspires youth to think creatively and embrace unconventional ideas.", // Updated bio
+        image: "assets/images/SPEAKERS 23/ASHU GHAI - 2023.png",
+        featured: true, 
+        topics: [],
+        year: 2023,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/ashu-ghai-179892254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            instagram: "https://www.instagram.com/ashu.ghai?igsh=MTljd2ZqOXhnbzhkYQ==" // Added Instagram
+        }
+    },
+    {
+        name: "Col. Rajeev Bharwan",
+        title: "Veteran & SSB Mentor", // Updated title
+        bio: "Col. Rajeev Bharwan is a decorated Indian Army veteran and Gorkha regiment officer with over two decades of service, including operations in Manipur, J&K, and Assam. Post-retirement, he serves as an SSB mentor, life coach, and motivational speaker, inspiring youth through his platform “Soldier Unplugged.”", // Updated bio
+        image: "assets/images/SPEAKERS 23/COL. RAJEEV BHARWAN - 2023.png",
+        featured: false,
+        topics: [],
+        year: 2023,
+        socialLinks: {
+            instagram: "https://www.instagram.com/col_bharwan_?igsh=MTc4NDk5dzU0a2x4dA==" // Added Instagram
+        }
+    },
+    {
+        name: "Karan Torani",
+        title: "Fashion Designer",
+        bio: "Karan Torani is an Indian fashion designer and founder of the label Torani, celebrated for reviving traditional Indian crafts through nostalgic storytelling. His designs draw inspiration from childhood memories and vintage aesthetics, blending heritage with contemporary fashion.", // Updated bio
+        image: "assets/images/SPEAKERS 23/KARAN TORANI - 2023.png",
+        featured: false,
+        topics: [],
+        year: 2023,
+        socialLinks: {
+            instagram: "https://www.instagram.com/karantorani?igsh=OXprdGtsMzF4MW9s" // Added Instagram
+        }
+    },
+    {
+        name: "Kareema Barry",
+        title: "Actor & Influencer", // Updated title
+        bio: "Kareema Barry is an actor and influencer known for her humorous content on Instagram, gaining popularity during the 2020 lockdown. She has appeared in Masaba Masaba and Girls Hostel and is known for her relatable, satirical characters.", // Updated bio
+        image: "assets/images/SPEAKERS 23/KAREEMA BARRY - 2023.png",
+        featured: false,
+        topics: [],
+        year: 2023,
+        socialLinks: {
+            instagram: "https://www.instagram.com/kareemabarry?igsh=czFiemtsZGxlYXZ6" // Added Instagram
+        }
+    },
+    {
+        name: "Shreya Kapoor", // Corrected spelling
+        title: "Finance Expert & Content Creator", // Updated title
+        bio: "Shreyaa Kapoor is a finance expert and content creator, specializing in personal finance education. She simplifies investing, budgeting, and wealth-building for her 640,000+ followers.", // Updated bio
+        image: "assets/images/SPEAKERS 23/SHREYA KAPOOR - 2023.png",
+        featured: false,
+        topics: [],
+        year: 2023,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/shreyaa-kapoor-95a359105?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            instagram: "https://www.instagram.com/shreyaakapoor_?igsh=MWN6MTg0YTk1MDZ5YQ==" // Added Instagram
+        }
+    },
+    {
+        name: "Sudhanshu Mani",
+        title: "Engineer & Innovator",
+        bio: "Sudhanshu Mani is an Indian railway engineer and innovator credited as the “father of the Vande Bharat Express,” having led its design at ICF Chennai and delivered the prototype in just 18 months.", // Updated bio
+        image: "assets/images/SPEAKERS 23/SUDHANSHU MANI - 2023.png",
+        featured: false,
+        topics: [],
+        year: 2023,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/s-mani-train18?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        }
+    },
+    {
+        name: "Vishal Malik",
+        title: "Author & Career Guidance Expert", // Updated title
+        bio: "Vishal Malik is an author and career guidance expert, known for books like What After School? and Embrace Your Genius, which guide individuals in career planning and personal development.", // Updated bio
+        image: "assets/images/SPEAKERS 23/VISHAL MALIK - 2023.png",
+        featured: false,
+        topics: [],
+        year: 2023,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/vishal-malik-8365191?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            instagram: "https://www.instagram.com/vishal_malik_letzascend?igsh=d2U4MTh3MjkwNm9q" // Added Instagram
+        }
+    },
+    {
+        name: "Yatinder Singh",
+        title: "Bodybuilder & Fitness Icon",
+        bio: "Yatinder Singh is a champion bodybuilder, Mr. World 2024, and fitness entrepreneur. He overcame a major spinal injury to become a top athlete and motivational speaker.", // Updated bio
+        image: "assets/images/SPEAKERS 23/YATINDER SINGH - 2023.png",
+        featured: false,
+        topics: [],
+        year: 2023,
+        socialLinks: {
+            instagram: "https://www.instagram.com/yatindersingh_official?igsh=MWtvMGMweWhjejNu" // Added Instagram
         }
     }
 ];
 
 document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('speakers-container')) {
-        displaySpeakers('all');
+        displaySpeakers('featured'); // Default to featured speakers
         setupFilters();
     } else {
         document.addEventListener('speakersLoaded', () => {
-            displaySpeakers('all');
+            displaySpeakers('featured'); // Default to featured speakers
             setupFilters();
         });
     }
@@ -87,32 +437,43 @@ document.addEventListener('DOMContentLoaded', function() {
 function displaySpeakers(filter) {
     const speakersContainer = document.getElementById('speakers-container');
     if (!speakersContainer) return;
-    
+
     speakersContainer.innerHTML = '';
-    
-    const filteredSpeakers = filter === 'all' 
-        ? speakers 
-        : speakers.filter(speaker => speaker.topics.includes(filter));
-    
+
+    let filteredSpeakers;
+    // Check if the filter is 'featured', a year, or 'all' (treat 'all' as 2024 for now)
+    if (filter === 'featured') {
+        filteredSpeakers = speakers.filter(speaker => speaker.featured === true);
+    } else if (filter === 'all' || filter === '2024') { 
+        filteredSpeakers = speakers.filter(speaker => speaker.year === 2024); 
+    } else if (!isNaN(parseInt(filter))) {
+        // Filter by year if the filter is a number (like '2021', '2022', '2023')
+        const yearFilter = parseInt(filter);
+        filteredSpeakers = speakers.filter(speaker => speaker.year === yearFilter);
+    } else {
+        // Fallback or handle other potential filters (like topics if re-introduced)
+        // Currently defaults to showing nothing or could default to 'featured' or '2024'
+        console.warn(`Unhandled filter type: ${filter}. Defaulting to featured.`);
+        filteredSpeakers = speakers.filter(speaker => speaker.featured === true); 
+    }
+
     // Default placeholder URL
     const placeholderImageUrl = 'https://i.pinimg.com/736x/22/4b/a8/224ba8c273f1b3a18eb6514b77cb10f0.jpg';
-    // Special placeholder for James and Marcus
+    // Special placeholder for James and Marcus (adjust if needed)
     const malePlaceholderUrl = 'https://avatars.pfptown.com/789/anime-pfp-1030.png';
 
     filteredSpeakers.forEach(speaker => {
         const speakerCard = document.createElement('div');
+        // Add 'featured' class if the speaker is featured, for potential styling
         speakerCard.className = `speaker-card ${speaker.featured ? 'featured' : ''}`;
-        
-        // Choose placeholder based on speaker name
+
+        // Choose placeholder based on speaker name - Update this logic if needed
         let imagePath = speaker.image;
         if (!imagePath) {
-            if (speaker.name === "James Wilson" || speaker.name === "Marcus Johnson") {
-                imagePath = malePlaceholderUrl;
-            } else {
-                imagePath = placeholderImageUrl;
-            }
+            // Simplified placeholder logic - adjust as needed
+            imagePath = placeholderImageUrl;
         }
-        
+
         speakerCard.innerHTML = `
             <div class="speaker-image-container">
                 <img src="${imagePath}" alt="${speaker.name}" class="speaker-image" onerror="this.onerror=null; this.src='${placeholderImageUrl}';">
@@ -122,19 +483,22 @@ function displaySpeakers(filter) {
                 <p class="speaker-title">${speaker.title}</p>
                 <p class="speaker-bio">${speaker.bio}</p>
                 <div class="speaker-social">
-                    ${speaker.socialLinks.twitter ? `<a href="${speaker.socialLinks.twitter}" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>` : ''}
                     ${speaker.socialLinks.linkedin ? `<a href="${speaker.socialLinks.linkedin}" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>` : ''}
+                    ${speaker.socialLinks.instagram ? `<a href="${speaker.socialLinks.instagram}" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>` : ''} 
+                    ${speaker.socialLinks.twitter ? `<a href="${speaker.socialLinks.twitter}" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>` : ''}
+                    ${speaker.socialLinks.youtube ? `<a href="${speaker.socialLinks.youtube}" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>` : ''}
+                    ${speaker.socialLinks.profile ? `<a href="${speaker.socialLinks.profile}" target="_blank" aria-label="Profile"><i class="fas fa-user-circle"></i></a>` : ''} 
                 </div>
             </div>
         `;
-        
+
         speakersContainer.appendChild(speakerCard);
     });
-    
+
     if (filteredSpeakers.length === 0) {
         speakersContainer.innerHTML = `
             <div class="no-results">
-                <p>No speakers found for this topic.</p>
+                <p>No speakers found for this selection.</p>
             </div>
         `;
     }
@@ -142,12 +506,12 @@ function displaySpeakers(filter) {
 
 function setupFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
-    
+
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
             filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
-            
+
             const filter = this.getAttribute('data-filter');
             displaySpeakers(filter);
         });
@@ -157,7 +521,7 @@ function setupFilters() {
 document.addEventListener('speakersLoaded', () => {
     const speakersContainer = document.getElementById('speakers-container');
     if (speakersContainer && speakersContainer.children.length === 0) {
-        displaySpeakers('all');
+        displaySpeakers('featured'); // Default to featured speakers
         setupFilters();
     }
 });

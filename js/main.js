@@ -10,10 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Content sections
     loadComponent('about', componentPath);
     loadComponent('speakers', componentPath);
-    loadComponent('schedule', componentPath);
     loadComponent('sponsors', componentPath); // Add this line
     loadComponent('quotes', componentPath);
-    loadComponent('contact', componentPath);
     loadComponent('register', componentPath);
 });
 
