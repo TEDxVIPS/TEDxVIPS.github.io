@@ -103,15 +103,17 @@
 
 .speaker-image-container {
     position: relative;
-    height: 100%; /* Image container takes full card height initially */
+    height: 100% ; /* Image container takes full card height initially */
     overflow: hidden;
+    background-color: #111; /* Add a dark background fallback */
 }
 
 .speaker-image {
+    display: block; /* Treat image as a block element */
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Scale the image to cover the container, cropping if necessary */
-    object-position: center center; /* Center the image vertically and horizontally */
+    height: 100%; /* Ensure image tries to fill container height */
+    object-fit: cover; /* Scale the image to cover the container, cropping sides or top/bottom */
+    object-position: center top; /* Prioritize top for vertical cropping, center for horizontal */
     filter: grayscale(100%) contrast(1.1); /* Initial filter */
     transition: all 0.5s ease; /* Smooth transition for hover effects */
 }
@@ -197,13 +199,6 @@
     opacity: 1; /* Show bio and social links on hover */
 }
 
-/* Featured speaker */
-.speaker-card.featured {
-    /* Remove or comment out these lines */
-    /* grid-column: span 2; */
-    /* height: 500px; */
-    /* Add any other specific featured styles if needed, but not size-related */
-}
 
 /* Responsive styles */
 @media (max-width: 992px) {

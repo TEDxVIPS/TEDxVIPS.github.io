@@ -93,14 +93,6 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
 }
 
-/* Adjust logo container height for different tiers */
-.platinum-tier .sponsor-logo {
-    height: 150px;
-}
-
-.gold-tier .sponsor-logo {
-    height: 130px;
-}
 
 .silver-tier .sponsor-logo {
     height: 110px;
@@ -121,13 +113,7 @@
         gap: 30px;
     }
 
-    .platinum-grid {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .gold-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
+    
 
     .silver-grid {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
