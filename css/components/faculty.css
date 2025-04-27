@@ -1,0 +1,176 @@
+/* Basic styles for the team sections */
+.team-section {
+    padding: 80px 0; /* Increased padding */
+    text-align: center;
+}
+
+.faculty-section {
+    background-color: var(--white); /* Or a suitable background */
+    color: var(--black);
+}
+
+.organizing-team-section {
+    background-color: var(--light-gray); /* Different background for contrast */
+    color: var(--black);
+}
+
+.team-section .section-title {
+    margin-bottom: 60px; /* Increased margin */
+}
+
+.team-section .section-title h2 {
+    color: var(--black);
+    margin-bottom: 15px; /* Adjusted margin */
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Ensure h2 color in faculty section is white */
+.faculty-section .section-title h2 {
+    color: var(--white); /* Changed color to white */
+}
+
+/* Underline for section titles */
+.team-section .section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--tedx-red);
+}
+
+.team-section .section-title p.section-subtitle {
+    color: var(--medium-gray);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 0 auto; /* Removed bottom margin from here */
+}
+
+/* Grid layout for team members */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Slightly larger minmax */
+    gap: 40px; /* Increased gap */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 15px; /* Add some padding on the sides */
+}
+
+/* Styling for individual member cards */
+.team-member-card {
+    background-color: var(--white);
+    border-radius: 10px; /* Slightly more rounded */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    padding: 30px; /* Increased padding */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee; /* Subtle border */
+}
+
+.team-member-card:hover {
+    transform: translateY(-8px); /* Increased lift */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); /* Enhanced shadow */
+}
+
+/* Specific depth effect for Organizing Team cards */
+.organizing-team-section .team-member-card {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Deeper initial shadow */
+    border: 1px solid #e0e0e0; /* Add a slightly darker border for contrast */
+}
+
+.organizing-team-section .team-member-card:hover {
+    transform: translateY(-10px) scale(1.02); /* More lift and slight scale */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.member-photo {
+    width: 130px; /* Slightly larger photo */
+    height: 130px;
+    border-radius: 50%; /* Circular photos */
+    object-fit: cover; /* Ensure photo covers the area */
+    margin: 0 auto 20px auto; /* Increased bottom margin */
+    border: 4px solid var(--tedx-red); /* Thicker border */
+    display: block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow on photo */
+}
+
+.member-name {
+    font-size: 1.4rem; /* Slightly larger name */
+    color: var(--dark-gray);
+    margin-bottom: 8px; /* Adjusted margin */
+    font-weight: 700; /* Bolder name */
+}
+
+.member-title {
+    font-size: 1rem;
+    color: var(--tedx-red);
+    margin-bottom: 15px; /* Increased margin */
+    font-weight: 600; /* Bolder title */
+    text-transform: uppercase; /* Uppercase title */
+    letter-spacing: 0.5px;
+}
+
+.member-bio {
+    font-size: 0.95rem; /* Slightly larger bio */
+    color: var(--medium-gray);
+    line-height: 1.6; /* Adjusted line height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) { /* Added breakpoint for tablets */
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 30px;
+    }
+    .member-photo {
+        width: 110px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-section {
+        padding: 60px 0;
+    }
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+    }
+
+    .team-member-card {
+        padding: 25px; /* Adjusted padding */
+    }
+
+    .member-photo {
+        width: 100px;
+        height: 100px;
+    }
+    .member-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-section {
+        padding: 50px 0; /* Adjusted padding */
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+        gap: 25px; /* Adjusted gap */
+        max-width: 320px; /* Adjusted width */
+    }
+
+     .member-photo {
+        width: 100px; /* Keep size consistent with 768px */
+        height: 100px;
+    }
+
+    .member-name {
+        font-size: 1.25rem; /* Adjusted size */
+    }
+}

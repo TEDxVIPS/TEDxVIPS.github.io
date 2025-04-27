@@ -138,6 +138,43 @@ section::after {
     border: none !important; /* Ensure no borders */
 }
 
+/* Team Link Section */
+#team-link {
+    padding: 80px 0; /* Increased padding */
+    background: linear-gradient(to bottom, var(--white) 0%, #fdfdfd 100%); /* Subtle gradient */
+    border-top: 1px solid #eee; /* Add a subtle top border */
+    border-bottom: 1px solid #eee; /* Add a subtle bottom border */
+    margin-bottom: 60px; /* Added bottom margin for spacing */
+}
+
+#team-link .section-title h2 {
+    color: var(--black); /* Ensure title color is black */
+}
+
+#team-link .section-title h2::after {
+    background-color: var(--tedx-red); /* Ensure underline color */
+}
+
+#team-link .section-subtitle {
+    color: var(--medium-gray);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 50px auto; /* Increased bottom margin */
+}
+
+/* Enhance button style within this section */
+#team-link .btn {
+    padding: 14px 35px; /* Slightly larger padding */
+    font-size: 1rem;
+    transition: all 0.3s ease, transform 0.2s ease; /* Added transform transition */
+}
+
+#team-link .btn:hover {
+    transform: translateY(-3px); /* Add lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow on hover */
+}
+
+
 /* Event details section */
 .event-meta {
     display: flex;
@@ -249,6 +286,16 @@ html {
     #event-details {
         padding-top: 20px;
     }
+
+    /* Team Link Section Responsive */
+    #team-link {
+        padding: 60px 0; /* Adjust padding for mobile */
+        margin-bottom: 40px; /* Adjust bottom margin for mobile */
+    }
+
+    #team-link .section-subtitle {
+        margin-bottom: 40px; /* Adjust margin for mobile */
+    }
 }
 
 /* Extra small devices */
@@ -269,5 +316,11 @@ html {
     
     h2 {
         font-size: 1.6rem;
+    }
+
+    /* Team Link Section Responsive */
+    #team-link {
+        padding: 50px 0; /* Further adjust padding */
+        margin-bottom: 30px; /* Further adjust bottom margin */
     }
 }

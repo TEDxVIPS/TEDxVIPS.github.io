@@ -27,7 +27,22 @@
     font-size: 3.2rem;
     margin-bottom: 15px;
     position: relative;
+    display: inline-block; /* Needed for centering the ::after */
+    padding-bottom: 16px; /* Add padding to make space for the underline */
 }
+
+/* Add centering for the underline */
+.speakers-container .section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust position to truly center */
+    width: 60px; /* Keep existing width or adjust as needed */
+    height: 4px; /* Keep existing height or adjust as needed */
+    background-color: var(--tedx-red); /* Use the TEDx red variable */
+}
+
 
 .speakers-container .section-subtitle {
     font-size: 1.1rem;
