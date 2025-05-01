@@ -27,22 +27,20 @@
     font-size: 3.2rem;
     margin-bottom: 15px;
     position: relative;
-    display: inline-block; /* Needed for centering the ::after */
-    padding-bottom: 16px; /* Add padding to make space for the underline */
+    display: inline-block; 
+    padding-bottom: 16px; 
 }
 
-/* Add centering for the underline */
 .speakers-container .section-title h2::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust position to truly center */
-    width: 60px; /* Keep existing width or adjust as needed */
-    height: 4px; /* Keep existing height or adjust as needed */
-    background-color: var(--tedx-red); /* Use the TEDx red variable */
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 60px; 
+    height: 4px; 
+    background-color: var(--tedx-red); 
 }
-
 
 .speakers-container .section-subtitle {
     font-size: 1.1rem;
@@ -102,35 +100,37 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    justify-content: center; /* Center grid tracks horizontally */
+    justify-items: center; /* Center items within their grid cell */
 }
 
 /* Redesigned speaker card */
 .speaker-card {
     position: relative;
     overflow: hidden;
-    border-radius: 0; /* Sharp edges for minimal design */
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    height: 400px; /* Ensure consistent height */
+    border-radius: 0; 
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 400px; 
     display: flex;
     flex-direction: column;
-    background-color: #1a1a1a; /* Add a subtle background */
+    background-color: #1a1a1a; 
 }
 
 .speaker-image-container {
     position: relative;
-    height: 100% ; /* Image container takes full card height initially */
+    height: 100% ; 
     overflow: hidden;
-    background-color: #111; /* Add a dark background fallback */
+    background-color: #111; 
 }
 
 .speaker-image {
-    display: block; /* Treat image as a block element */
+    display: block; 
     width: 100%;
-    height: 100%; /* Ensure image tries to fill container height */
-    object-fit: cover; /* Scale the image to cover the container, cropping sides or top/bottom */
-    object-position: center top; /* Prioritize top for vertical cropping, center for horizontal */
-    filter: grayscale(100%) contrast(1.1); /* Initial filter */
-    transition: all 0.5s ease; /* Smooth transition for hover effects */
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center top; 
+    filter: grayscale(100%) contrast(1.1); 
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .speaker-details {
@@ -140,9 +140,9 @@
     right: 0;
     background: linear-gradient(to top, rgba(0,0,0,0.9) 50%, transparent);
     padding: 30px 20px 20px;
-    transform: translateY(calc(100% - 80px)); /* Initially show only name/title area */
-    transition: transform 0.4s ease;
-    color: #fff; /* Ensure text is white */
+    transform: translateY(calc(100% - 110px)); 
+    transition: transform 0.25s ease, background 0.25s ease;
+    color: #fff; 
 }
 
 .speaker-name {
@@ -150,6 +150,7 @@
     margin-bottom: 0;
     font-weight: 700;
     color: #fff;
+    transition: opacity 0.2s ease 0.05s;
 }
 
 .speaker-title {
@@ -159,22 +160,30 @@
     letter-spacing: 1px;
     margin-bottom: 15px;
     font-weight: 500;
+    transition: opacity 0.2s ease 0.05s;
 }
 
 .speaker-bio {
     font-size: 0.95rem;
     line-height: 1.7;
     margin-bottom: 20px;
-    opacity: 0; /* Hide bio initially */
-    transition: opacity 0.3s ease 0.1s; /* Fade in on hover */
+    opacity: 0; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: opacity 0.2s ease 0.1s, max-height 0.25s ease 0.1s, -webkit-line-clamp 0.25s ease 0.1s;
     color: rgba(255, 255, 255, 0.9);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 0; 
 }
 
 .speaker-social {
     display: flex;
     gap: 12px;
-    opacity: 0; /* Hide social links initially */
-    transition: opacity 0.3s ease 0.2s; /* Fade in on hover */
+    opacity: 0; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: opacity 0.2s ease 0.15s, max-height 0.25s ease 0.15s;
 }
 
 .speaker-social a {
@@ -187,11 +196,35 @@
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
     transition: all 0.3s ease;
-    font-size: 0.9rem; /* Ensure icons are sized appropriately */
+    font-size: 0.9rem; 
 }
 
-.speaker-social a i { /* Target Font Awesome icons if used */
+.speaker-social a i { 
     line-height: 1;
+}
+
+/* Read More Button */
+.read-more-btn {
+    display: none; 
+    opacity: 0; 
+    max-height: 0; 
+    overflow: hidden;
+    background: var(--tedx-red);
+    color: #fff;
+    border: none;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px; 
+    margin-bottom: 15px; 
+    transition: background-color 0.2s ease, opacity 0.2s ease 0.15s, max-height 0.25s ease 0.15s;
+    display: inline-block; 
+}
+
+.read-more-btn:hover {
+    background-color: #c80022; 
 }
 
 /* Speaker card hover effects */
@@ -201,19 +234,40 @@
 }
 
 .speaker-card:hover .speaker-image {
-    filter: grayscale(30%) contrast(1.1); /* Reduce grayscale on hover */
-    transform: scale(1.05); /* Slight zoom effect */
+    filter: grayscale(30%) contrast(1.1); 
+    transform: scale(1.05); 
 }
 
 .speaker-card:hover .speaker-details {
-    transform: translateY(0); /* Reveal full details on hover */
+    transform: translateY(0); 
 }
 
-.speaker-card:hover .speaker-bio,
-.speaker-card:hover .speaker-social {
-    opacity: 1; /* Show bio and social links on hover */
+/* Desktop Hover - Partial Bio Reveal */
+.speaker-card:hover .speaker-bio {
+    opacity: 1; 
+    max-height: 3.4em; 
+    -webkit-line-clamp: 2; 
 }
 
+/* Desktop Hover - Show Social and Read More */
+.speaker-card:hover .speaker-social,
+.speaker-card:hover .read-more-btn {
+    opacity: 1; 
+    max-height: 100px; 
+}
+
+/* Desktop Click "Read More" - Full Bio Reveal */
+.speaker-card:hover.desktop-fully-expanded .speaker-bio {
+    max-height: 500px; 
+    -webkit-line-clamp: unset; 
+    transition: opacity 0.2s ease, max-height 0.25s ease, -webkit-line-clamp 0.25s ease;
+}
+
+/* Fade out name and title on desktop hover */
+.speaker-card:hover .speaker-name,
+.speaker-card:hover .speaker-title {
+    opacity: 0; 
+}
 
 /* Responsive styles */
 @media (max-width: 992px) {
@@ -222,8 +276,7 @@
     }
 
     .speaker-card.featured {
-        /* Remove or comment out these lines */
-        /* grid-column: 1 / -1; */ /* Span all available columns */
+        /* grid-column: 1 / -1; */ 
         /* height: 450px; */
     }
     
@@ -263,30 +316,99 @@
     
     .speakers-grid {
         gap: 25px;
-        padding: 0 10px;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        padding: 0 5px; /* Further reduced horizontal padding */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased the minimum width */
+        justify-content: center; /* Ensure centering on tablet/mobile */
+        justify-items: center; /* Ensure centering items on tablet/mobile */
     }
     
     .speaker-card {
-        height: 420px; /* Increased height for mobile */
+        aspect-ratio: 3 / 4; /* Apply 3:4 aspect ratio */
     }
     
-    /* Remove the featured height override if it exists, or ensure it doesn't conflict */
-    /* .speaker-card.featured { */
-        /* height: 400px; */ /* Removed this line */
-    /* } */
-    
-    /* Always show speaker details on mobile - better UX than hover */
+    /* Mobile-specific initial state */
     .speaker-details {
-        transform: translateY(0);
-        background: linear-gradient(to top, rgba(0,0,0,0.9) 70%, transparent);
+        transform: translateY(calc(100% - 110px)); 
+        background: linear-gradient(to top, rgba(0,0,0,0.95) 50%, transparent); 
         padding: 20px 15px 15px;
+        transition: transform 0.25s ease, background 0.25s ease; 
+        cursor: pointer; 
     }
     
-    .speaker-bio, .speaker-social {
-        opacity: 1; /* Always visible */
+    .speaker-bio, .speaker-social, .read-more-btn {
+        opacity: 0; 
+        max-height: 0; 
+        overflow: hidden;
+        transition: opacity 0.2s ease 0.1s, max-height 0.25s ease 0.1s, -webkit-line-clamp 0.25s ease 0.1s;
+    }
+
+    .speaker-social {
+        transition: opacity 0.2s ease 0.15s, max-height 0.25s ease 0.15s;
+    }
+
+    .read-more-btn {
+        display: inline-block; 
+        margin-bottom: 5px; 
+        transition: background-color 0.2s ease, opacity 0.2s ease 0.15s, max-height 0.25s ease 0.15s;
     }
     
+    /* Disable ALL hover expansion on mobile */
+    .speaker-card:hover .speaker-details {
+        transform: translateY(calc(100% - 110px)); 
+    }
+    .speaker-card:hover .speaker-bio,
+    .speaker-card:hover .speaker-social,
+    .speaker-card:hover .read-more-btn { 
+        opacity: 0; 
+        max-height: 0;
+        -webkit-line-clamp: 0; 
+    }
+    .speaker-card:hover .speaker-name,
+    .speaker-card:hover .speaker-title { 
+        opacity: 1; 
+    }
+    .speaker-card.desktop-fully-expanded .speaker-bio {
+         max-height: 0;
+         -webkit-line-clamp: 0;
+    }
+
+    /* --- Stage 1: Partially Expanded (Mobile Click) --- */
+    .speaker-card.mobile-partially-expanded .speaker-details {
+        transform: translateY(0); 
+        background: linear-gradient(to top, rgba(0,0,0,0.98) 85%, transparent); 
+        cursor: default; 
+    }
+
+    .speaker-card.mobile-partially-expanded .speaker-bio {
+        opacity: 1;
+        max-height: 3.4em; 
+        -webkit-line-clamp: 2; 
+    }
+
+    .speaker-card.mobile-partially-expanded .speaker-social {
+        opacity: 1;
+        max-height: 100px; 
+    }
+    
+    .speaker-card.mobile-partially-expanded .read-more-btn {
+        opacity: 1;
+        max-height: 50px; 
+    }
+
+    /* --- Stage 2: Fully Expanded (Mobile Click "Read More") --- */
+    .speaker-card.mobile-fully-expanded .speaker-bio {
+        max-height: 500px; 
+        -webkit-line-clamp: unset; 
+        transition: opacity 0.2s ease, max-height 0.25s ease, -webkit-line-clamp 0.25s ease;
+    }
+
+    /* Fade out name and title when fully expanded on mobile */
+    .speaker-card.mobile-fully-expanded .speaker-name,
+    .speaker-card.mobile-fully-expanded .speaker-title {
+        opacity: 0;
+        /* Transition is already defined on the base elements */
+    }
+
     .speaker-name {
         font-size: 1.4rem;
     }
@@ -294,7 +416,10 @@
 
 @media (max-width: 480px) {
     .speakers-grid {
-        grid-template-columns: 1fr; /* Single column on very small screens */
+        grid-template-columns: 1fr; /* Single column */
+        padding: 0 10px; /* Further reduced padding */
+        margin: 0 auto; /* Center the grid container itself */
+        justify-items: center; /* Center item in the single column */
     }
     
     .filter-btn {
@@ -305,13 +430,11 @@
 /* Container for the link/button to previous speakers page */
 .previous-speakers-link-container {
     text-align: center;
-    margin-top: 60px; /* Add space above the button */
+    margin-top: 60px; 
 }
 
 /* Style the button using existing btn classes or add specific styles */
 .previous-speakers-link-container .btn {
-    /* You can use existing .btn and .btn-secondary styles */
-    /* Or add specific overrides here if needed */
     padding: 12px 30px;
     font-size: 1rem;
 }
