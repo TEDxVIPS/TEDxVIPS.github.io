@@ -178,7 +178,19 @@
 /* Mobile Responsive Styles */
 @media (max-width: 992px) {
     .header {
-        padding: 10px 0;
+        padding: 10px 0; /* Keep vertical padding */
+    }
+    
+    /* Override container padding/width within header */
+    .header .container {
+        padding: 0;
+        max-width: none; 
+        width: 100%;
+    }
+
+    /* Add padding directly to the wrapper */
+    .header-wrapper {
+        padding: 0 20px; /* Add horizontal padding */
     }
     
     .mobile-only {
@@ -189,7 +201,6 @@
         display: flex;
         z-index: 1001;
         position: relative;
-        margin-right: 10px; /* Added right margin */
     }
     
     .nav-toggle span {
@@ -300,7 +311,7 @@
 
 @media (max-width: 480px) {
     .header-wrapper {
-        padding: 0 5px;
+        padding: 0 15px; /* Adjust padding for smaller screens */
     }
     
     .logo-text {
