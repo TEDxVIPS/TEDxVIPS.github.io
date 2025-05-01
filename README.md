@@ -9,46 +9,55 @@ The project is organized into the following structure:
 ```
 tedx-college-conference
 ├── index.html          # Main entry point for the website
+├── faculty.html        # Page for faculty and organizers
 ├── css                 # Contains all CSS files
 │   ├── main.css        # Main styles for the website
-│   ├── components      # Component-specific styles
-│   │   ├── header.css
-│   │   ├── footer.css
-│   │   ├── hero.css
-│   │   ├── speakers.css
-│   │   ├── schedule.css
-│   │   └── contact.css
-│   └── theme.css       # Theme-specific styles
+│   ├── theme.css       # Theme-specific styles (colors, fonts, etc.)
+│   └── components      # Component-specific styles
+│       ├── header.css
+│       ├── hero.css
+│       ├── about.css
+│       ├── speakers.css
+│       ├── sponsors.css
+│       ├── faculty.css
+│       └── footer.css
 ├── js                  # Contains all JavaScript files
-│   ├── main.js         # Main JavaScript file
-│   ├── components      # Component-specific scripts
-│   │   ├── header.js
-│   │   ├── footer.js
-│   │   ├── hero.js
-│   │   ├── speakers.js
-│   │   ├── schedule.js
-│   │   └── contact.js
-│   └── utils.js        # Utility functions
-├── components          # HTML components
+│   ├── main.js         # Main JavaScript file (loads components)
+│   └── components      # Component-specific scripts
+│       ├── header.js
+│       ├── hero.js
+│       ├── about.js
+│       ├── speakers.js
+│       ├── sponsors.js
+│       └── footer.js
+├── components          # HTML component partials
 │   ├── header.html
-│   ├── footer.html
 │   ├── hero.html
-│   ├── speakers.html
-│   ├── schedule.html
-│   └── contact.html
-├── pages               # Additional pages
 │   ├── about.html
 │   ├── speakers.html
-│   ├── schedule.html
-│   └── register.html
+│   ├── sponsors.html
+│   ├── quotes.html     # (If used)
+│   ├── register.html   # (If used)
+│   └── footer.html
+├── assets              # Static assets
+│   └── images          # Image files
+│       ├── logos/      # Logo images
+│       ├── SPEAKERS 21/ # Speaker images for 2021
+│       ├── SPEAKERS 22/ # Speaker images for 2022
+│       ├── SPEAKERS 23/ # Speaker images for 2023
+│       └── SPEAKERS 24/ # Speaker images for 2024
 └── README.md           # Project documentation
 ```
+
+## View Website
+
+You can view the live website here: [https://tedxvips.github.io](https://tedxvips.github.io)
 
 ## Setup Instructions
 
 1. **Clone the Repository**: 
    ```
-   git clone <repository-url>
+   git clone https://github.com/TEDxVIPS/tedxvips.github.io.git
    ```
 
 2. **Navigate to the Project Directory**: 
@@ -72,5 +81,12 @@ tedx-college-conference
 
 The TEDx College Conference aims to bring together innovative thinkers and speakers to share their ideas and inspire the community. Stay tuned for updates on speakers, schedules, and registration details!
 
-For any inquiries, please contact the organizing committee.# tedx
-# TEDxVIPS.github.io
+For any inquiries, please contact the organizing committee.
+
+## Developed By
+
+- [himanshu07p](https://github.com/himanshu07p)
+
+# tedxvips.github.io
+
+
