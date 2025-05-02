@@ -174,6 +174,18 @@ section::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow on hover */
 }
 
+/* Mascot Section Styles */
+#mascot-section {
+    padding: 60px 0; /* Adjust padding as needed */
+    background-color: var(--bg-secondary); /* Or var(--bg-primary) */
+}
+
+.mascot-image {
+    max-width: 200px; /* Adjust size as needed */
+    height: auto;
+    margin: 0 auto; /* Center the image if section is text-center */
+    display: block; /* Ensure block display for margin auto */
+}
 
 /* Event details section */
 .event-meta {
@@ -296,6 +308,15 @@ html {
     #team-link .section-subtitle {
         margin-bottom: 40px; /* Adjust margin for mobile */
     }
+
+    /* Mascot Section Responsive */
+    #mascot-section {
+        padding: 40px 0; /* Adjust padding for mobile */
+    }
+
+    .mascot-image {
+        max-width: 150px; /* Adjust size for mobile */
+    }
 }
 
 /* Extra small devices */
@@ -322,5 +343,14 @@ html {
     #team-link {
         padding: 50px 0; /* Further adjust padding */
         margin-bottom: 30px; /* Further adjust bottom margin */
+    }
+
+    /* Mascot Section Responsive */
+    #mascot-section {
+        padding: 30px 0; /* Further adjust padding */
+    }
+
+    .mascot-image {
+        max-width: 120px; /* Adjust size for extra small devices */
     }
 }
