@@ -58,31 +58,54 @@
 }
 
 .about-section {
-    padding: 100px 0;
+    padding: var(--spacing-xxl) 0; /* Increased padding */
     background-color: #fff;
     color: #000;
 }
 
+.about-section .section-title {
+    margin-bottom: var(--spacing-xxl); /* Increased margin */
+}
+
 .about-section .section-title h2 {
-    color: #000;
+    color: var(--black); /* Ensure color for light theme */
 }
 
 .about-section .section-title h2::after {
-    background-color: #EB0028;
-    left: 0;
-    transform: none;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline */
+    width: 80px; /* Slightly wider underline */
+    height: 4px; /* Match theme.css centered title underline */
+    background-color: var(--tedx-red);
 }
 
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: var(--spacing-xl); /* Increased gap */
     align-items: center;
 }
 
-.about-text p {
-    margin-bottom: 24px;
-    line-height: 1.8;
+.about-text {
+    padding-right: var(--spacing-lg); /* Add padding if text is on the left */
+}
+
+.about-text .large-text {
+    font-size: 1.3rem; /* Slightly increased size */
+    font-weight: 500;
+    color: var(--dark-gray); /* Softer black */
+    line-height: 1.7; /* Improved readability */
+    margin-bottom: var(--spacing-lg); /* Increased margin */
+}
+
+.about-text p:not(.large-text) {
+    font-size: 1rem; /* Standardized paragraph font size */
+    line-height: 1.7; /* Improved readability */
+    color: var(--medium-gray); /* Softer text color */
+    margin-bottom: var(--spacing-md);
 }
 
 .large-text {
@@ -108,17 +131,18 @@
 
 .video-container {
     width: 100%;
-    max-width: 500px;
+    max-width: 500px; /* Retain max-width */
     margin: 0 auto;
     position: relative;
     background-color: #000;
     aspect-ratio: 16/9;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; /* Added border-radius */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Refined shadow */
 }
 
 .video-container:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18); /* Enhanced hover shadow */
 }
 
 /* Custom Play Button */
@@ -127,27 +151,27 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70px;
-    height: 70px;
-    background-color: rgba(0, 0, 0, 0.5);
+    width: 80px; /* Increased size */
+    height: 80px; /* Increased size */
+    background-color: rgba(235, 0, 40, 0.75); /* TEDx Red with transparency */
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
     z-index: 10;
 }
 
 .custom-play-button:hover {
-    background-color: rgba(235, 0, 40, 0.8); /* TEDx red with opacity */
-    transform: translate(-50%, -50%) scale(1.1);
+    background-color: var(--tedx-red); /* Solid TEDx Red on hover */
+    transform: translate(-50%, -50%) scale(1.15); /* Larger scale on hover */
 }
 
 .custom-play-button svg {
-    width: 30px;
-    height: 30px;
-    margin-left: 5px; /* Slight offset for the triangle to appear centered */
+    width: 35px; /* Increased icon size */
+    height: 35px; /* Increased icon size */
+    margin-left: 5px; 
 }
 
 /* Hide default controls initially */
@@ -183,7 +207,7 @@
 }
 
 .video-placeholder:hover {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Keep existing or refine if needed */
 }
 
 .video-placeholder:hover .play-icon {
@@ -192,9 +216,10 @@
 
 .video-caption {
     text-align: center;
-    margin-top: 16px;
+    margin-top: var(--spacing-md); /* Use theme spacing */
     font-weight: 500;
     font-style: italic;
+    color: var(--medium-gray);
 }
 
 @media (max-width: 768px) {
@@ -205,20 +230,57 @@
 
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: var(--spacing-lg); /* Adjust gap for mobile */
     }
     
-    .large-text {
-        font-size: 1.4rem;
-        margin-bottom: 20px;
+    .about-text {
+        padding-right: 0; /* Remove padding on mobile */
+        order: 2; /* Text below video on mobile */
+    }
+
+    .large-text { /* Targets .about-text .large-text implicitly */
+        font-size: 1.2rem; /* Adjusted responsive size */
+        margin-bottom: var(--spacing-md);
+    }
+    
+    .about-text p:not(.large-text) { /* Targets .about-text p implicitly */
+        font-size: 0.95rem; /* Adjusted responsive size */
     }
     
     .about-video {
-        order: -1; /* Video first on mobile */
+        order: 1; /* Video first on mobile */
     }
     
     .video-container {
-        max-width: 100%; /* Full width on mobile */
+        max-width: 100%; 
+    }
+    
+    .custom-play-button {
+        width: 70px; /* Adjusted responsive size */
+        height: 70px; /* Adjusted responsive size */
+    }
+    
+    .custom-play-button svg {
+        width: 30px; /* Adjusted responsive icon size */
+        height: 30px;
+    }
+    
+    .about-section {
+        padding: var(--spacing-xl) 0; /* Adjust padding for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .large-text { /* Targets .about-text .large-text implicitly */
+        font-size: 1.1rem; /* Further adjust for smaller screens */
+    }
+    
+    .about-text p:not(.large-text) { /* Targets .about-text p implicitly */
+        font-size: 0.9rem; /* Further adjust for smaller screens */
+    }
+
+    .about-grid {
+        gap: var(--spacing-md);
     }
     
     .custom-play-button {
@@ -231,36 +293,7 @@
         height: 25px;
     }
     
-    .about p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-    
     .about-section {
-        padding: 60px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .large-text {
-        font-size: 1.2rem;
-    }
-    
-    .about-grid {
-        gap: 20px;
-    }
-    
-    .custom-play-button {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .custom-play-button svg {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .about-section {
-        padding: 40px 0;
+        padding: var(--spacing-lg) 0; /* Further adjust padding */
     }
 }
