@@ -57,10 +57,16 @@
     filter: grayscale(0%);
 }
 
+/* Target the section title within the #about section in index.html */
+#about .section-title {
+    text-align: left;
+}
+
 .about-section {
     padding: var(--spacing-xxl) 0; /* Increased padding */
     background-color: #fff;
     color: #000;
+    margin-bottom: var(--spacing-lg); /* Increased margin */
 }
 
 .about-section .section-title {
@@ -117,6 +123,7 @@
 
 .about-video {
     position: relative;
+    margin-top: -250px; /* Move the video container up */
 }
 
 .video-placeholder {
@@ -174,16 +181,6 @@
     margin-left: 5px; 
 }
 
-/* Hide default controls initially */
-.video-placeholder[controls] {
-    pointer-events: none;
-}
-
-/* Show controls when video is playing */
-.video-placeholder.playing {
-    pointer-events: auto;
-}
-
 .video-placeholder.playing + .custom-play-button {
     display: none;
 }
@@ -193,11 +190,6 @@
     display: block;
     width: 100%;
     height: 100%;
-}
-
-/* Hide controls initially but not the video */
-#aboutVideo:not(.playing) {
-    pointer-events: none;
 }
 
 .play-icon {
@@ -220,6 +212,25 @@
     font-weight: 500;
     font-style: italic;
     color: var(--medium-gray);
+}
+
+/* Styles for "View More" functionality */
+.more-text {
+    display: none;
+}
+
+#view-more-about-btn {
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg); /* Add some space below the button */
+    background-color: transparent;
+    color: var(--tedx-red);
+    border: 1px solid var(--tedx-red);
+    padding: var(--spacing-xs) var(--spacing-md);
+}
+
+#view-more-about-btn:hover {
+    background-color: var(--tedx-red);
+    color: var(--white);
 }
 
 @media (max-width: 768px) {
