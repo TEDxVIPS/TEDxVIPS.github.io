@@ -180,9 +180,16 @@
 .speaker-social {
     display: flex;
     gap: 12px;
-    opacity: 0; 
-    max-height: 0; 
-    overflow: hidden; 
+}
+
+/* Add a container for the button and social links to position them side by side */
+.speaker-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
     transition: opacity 0.2s ease 0.15s, max-height 0.25s ease 0.15s;
 }
 
@@ -199,16 +206,36 @@
     font-size: 0.9rem; 
 }
 
+/* Enhanced hover effects for social links */
+.speaker-social a:hover {
+    background-color: var(--tedx-red);
+    color: #fff;
+}
+
+/* Platform-specific hover effects */
+.speaker-social a[aria-label="LinkedIn"]:hover {
+    background-color: #0077b5;
+}
+
+.speaker-social a[aria-label="Instagram"]:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.speaker-social a[aria-label="YouTube"]:hover {
+    background-color: #ff0000;
+}
+
+.speaker-social a[aria-label="Twitter"]:hover {
+    background-color: #1da1f2;
+}
+
 .speaker-social a i { 
     line-height: 1;
 }
 
-/* Read More Button */
+/* Adjust the Read More Button */
 .read-more-btn {
-    display: none; 
-    opacity: 0; 
-    max-height: 0; 
-    overflow: hidden;
+    display: inline-block;
     background: var(--tedx-red);
     color: #fff;
     border: none;
@@ -217,10 +244,9 @@
     font-weight: 600;
     border-radius: 15px;
     cursor: pointer;
-    margin-top: 10px; 
-    margin-bottom: 15px; 
-    transition: background-color 0.2s ease, opacity 0.2s ease 0.15s, max-height 0.25s ease 0.15s;
-    display: inline-block; 
+    margin-top: 10px;
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease;
 }
 
 .read-more-btn:hover {
@@ -249,11 +275,11 @@
     -webkit-line-clamp: 2; 
 }
 
-/* Desktop Hover - Show Social and Read More */
-.speaker-card:hover .speaker-social,
-.speaker-card:hover .read-more-btn {
-    opacity: 1; 
-    max-height: 100px; 
+/* Desktop Hover - Show Actions */
+.speaker-card:hover .speaker-actions,
+.speaker-card.mobile-partially-expanded .speaker-actions {
+    opacity: 1;
+    max-height: 100px;
 }
 
 /* Desktop Click "Read More" - Full Bio Reveal */
@@ -347,9 +373,14 @@
     }
 
     .read-more-btn {
-        display: inline-block; 
-        margin-bottom: 5px; 
+        margin-right: 10px; /* Add some spacing between button and social links */
         transition: background-color 0.2s ease, opacity 0.2s ease 0.15s, max-height 0.25s ease 0.15s;
+    }
+    
+    .speaker-actions {
+        /* Make container more flexible on mobile */
+        flex-wrap: wrap;
+        justify-content: center; /* Center both elements on mobile */
     }
     
     /* Disable ALL hover expansion on mobile */

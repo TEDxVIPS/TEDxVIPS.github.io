@@ -58,11 +58,11 @@
 }
 
 .tedx-logo {
-    font-size: 5rem;
+    font-size: 4.5rem; /* Changed from 5rem */
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 5px; /* Changed from 15px */
     letter-spacing: -0.03em;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Roboto', sans-serif; 
 }
 
 .ted {
@@ -86,13 +86,33 @@
     display: none;
 }
 
-.hero-tagline {
-    font-size: 1.8rem;
-    margin: 30px 0 50px;
-    font-weight: 300;
+/* New styles for hero logo subtitle */
+.hero-logo-subtext {
+    display: block;
+    font-size: 12px; /* Changed from 10px */
+    text-transform: none;
     letter-spacing: 1px;
-    opacity: 0.9;
-    font-family: 'Roboto', sans-serif; /* Updated font */
+    color: #fff;
+    margin-top: 0; 
+    margin-bottom: 25px; /* Changed from 20px */
+    opacity: 0.8;
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+}
+
+.hero-logo-subtext .hero-red-x {
+    color: #EB0028; 
+    font-weight: 600;
+}
+
+.hero-tagline {
+    font-size: 1.6rem; /* Changed from 1.8rem */
+    margin: 0 0 30px; /* Adjusted top margin from 15px to 0 */
+    font-weight: 400; /* Changed from 300 */
+    letter-spacing: 0.5px; /* Changed from 1px */
+    opacity: 1; /* Changed from 0.9 */
+    font-family: 'Montserrat', sans-serif; /* Changed from 'Playfair Display', serif */
+    color: #fff; 
+    position: relative; 
 }
 
 .hero-cta {
@@ -135,13 +155,13 @@
 
 @media (max-width: 768px) {
     .hero {
-        height: 80vh; /* Slightly reduced height on mobile */
-        margin-top: -60px; /* Adjust for smaller header on mobile */
+        height: 80vh; 
+        margin-top: -60px; 
     }
     
     .tedx-logo {
-        font-size: 3rem;
-        margin-bottom: 15px;
+        font-size: 2.8rem; /* Changed from 3rem */
+        margin-bottom: 3px; /* Adjusted from 10px */
     }
     
     .x {
@@ -152,9 +172,15 @@
         font-size: 2.2rem;
     }
     
+    /* Responsive hero logo subtitle */
+    .hero-logo-subtext {
+        font-size: 10px; /* Changed from 9px */
+        margin-bottom: 18px; /* Changed from 15px */
+    }
+
     .hero-tagline {
-        font-size: 1.1rem;
-        margin: 20px 0 30px;
+        font-size: 1.2rem; /* Changed from 1.1rem */
+        margin: 0 0 20px; /* Adjusted top margin */
     }
     
     .hero-cta {
@@ -169,7 +195,8 @@
 
 @media (max-width: 480px) {
     .tedx-logo {
-        font-size: 2.5rem;
+        font-size: 2.2rem; /* Changed from 2.5rem */
+        margin-bottom: 2px; /* Adjusted */
     }
     
     .x {
@@ -180,9 +207,16 @@
         font-size: 1.8rem;
     }
     
+    /* Responsive hero logo subtitle for smaller screens */
+    .hero-logo-subtext {
+        font-size: 9px; /* Changed from 8px */
+        letter-spacing: 0.8px;
+        margin-bottom: 18px; /* Changed from 15px */
+    }
+
     .hero-tagline {
-        font-size: 1rem;
-        margin: 15px 0 25px;
+        font-size: 1.1rem; /* Changed from 1rem */
+        margin: 0 0 20px; /* Adjusted top margin */
     }
     
     .hero-cta {

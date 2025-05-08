@@ -1,5 +1,18 @@
 const speakers = [
     {
+        name: "Piyush Mishra",
+        title: "Actor, Poet & Musician",
+        bio: "Piyush Mishra is an acclaimed actor, lyricist, singer, and playwright. He won the Zee Cine Award for Best Dialogue for The Legend of Bhagat Singh (2003) and the Stardust Award for Music Director for Gulaal (2010). His musical ensemble, Ballimaaraan, is also well-known.",
+        image: "assets/images/SPEAKERS 22/PIYUSH MISHRA - 2022.png",
+        featured: true,
+        topics: [],
+        year: 2022,
+        socialLinks: {
+            instagram: "https://www.instagram.com/officialpiyushmishra/?hl=en",
+            youtube: "https://youtu.be/qQu8qfSBWWg?si=CKN7EZ0fw1hvyIcM"
+        }
+    },
+    {
         name: "Abhishek Kar",
         title: "Senior Research Scientist, Meta",
         bio: "Kar is a Senior Research Scientist at Meta, specializing in 3D vision and AR. He previously worked at Google AR and holds a Ph.D. from UC Berkeley.",
@@ -242,19 +255,6 @@ const speakers = [
         }
     },
     {
-        name: "Piyush Mishra",
-        title: "Actor, Poet & Musician",
-        bio: "Piyush Mishra is an acclaimed actor, lyricist, singer, and playwright. He won the Zee Cine Award for Best Dialogue for The Legend of Bhagat Singh (2003) and the Stardust Award for Music Director for Gulaal (2010). His musical ensemble, Ballimaaraan, is also well-known.",
-        image: "assets/images/SPEAKERS 22/PIYUSH MISHRA - 2022.png",
-        featured: false,
-        topics: [],
-        year: 2022,
-        socialLinks: {
-            instagram: "https://www.instagram.com/officialpiyushmishra/?hl=en",
-            youtube: "https://youtu.be/qQu8qfSBWWg?si=CKN7EZ0fw1hvyIcM"
-        }
-    },
-    {
         name: "Shaheen Malik",
         title: "Founder, Brave Souls Foundation",
         bio: "Shaheen Malik is an acid attack survivor and the founder of Brave Souls Foundation, a Delhi-based NGO established in 2021. Since surviving an attack in 2009, she has dedicated her life to supporting over 300 survivors through medical care, legal aid, and rehabilitation initiatives like the shelter home Apna Ghar.",
@@ -271,7 +271,7 @@ const speakers = [
         title: "Spiritual Guide",
         bio: "Amogh Lila Das is a prominent ISKCON leader and spiritual guide, known for his motivational talks and engaging spiritual discourses. He transitioned from a successful corporate career to dedicate his life to spreading Vedic wisdom and values, with a significant following on his YouTube channel Reviving Values.",
         image: "assets/images/SPEAKERS 22/SHREE AMOGH LEELA - 2022.png",
-        featured: true,
+        featured: false,
         topics: [],
         year: 2022,
         socialLinks: {
@@ -456,13 +456,15 @@ function displaySpeakers(filter) {
                 <h3 class="speaker-name">${speaker.name}</h3>
                 <p class="speaker-title">${speaker.title}</p>
                 <p class="speaker-bio">${speaker.bio}</p>
-                <button class="read-more-btn">Read More</button>
-                <div class="speaker-social">
-                    ${speaker.socialLinks.linkedin ? `<a href="${speaker.socialLinks.linkedin}" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>` : ''}
-                    ${speaker.socialLinks.instagram ? `<a href="${speaker.socialLinks.instagram}" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>` : ''}
-                    ${speaker.socialLinks.twitter ? `<a href="${speaker.socialLinks.twitter}" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>` : ''}
-                    ${speaker.socialLinks.youtube ? `<a href="${speaker.socialLinks.youtube}" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>` : ''}
-                    ${speaker.socialLinks.profile ? `<a href="${speaker.socialLinks.profile}" target="_blank" aria-label="Profile"><i class="fas fa-user-circle"></i></a>` : ''}
+                <div class="speaker-actions">
+                    <button class="read-more-btn">Read More</button>
+                    <div class="speaker-social">
+                        ${speaker.socialLinks.linkedin ? `<a href="${speaker.socialLinks.linkedin}" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>` : ''}
+                        ${speaker.socialLinks.instagram ? `<a href="${speaker.socialLinks.instagram}" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>` : ''}
+                        ${speaker.socialLinks.twitter ? `<a href="${speaker.socialLinks.twitter}" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>` : ''}
+                        ${speaker.socialLinks.youtube ? `<a href="${speaker.socialLinks.youtube}" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>` : ''}
+                        ${speaker.socialLinks.profile ? `<a href="${speaker.socialLinks.profile}" target="_blank" aria-label="Profile"><i class="fas fa-user-circle"></i></a>` : ''}
+                    </div>
                 </div>
             </div>
         `;
