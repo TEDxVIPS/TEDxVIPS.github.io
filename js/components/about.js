@@ -14,9 +14,31 @@ document.addEventListener('DOMContentLoaded', () => {
             if(playBtn && video) {
                 setupVideoPlayback(playBtn, video);
             }
+            // Setup "View More" for about text after aboutLoaded
+            setupAboutViewMore();
         });
     }
+    // Setup "View More" for about text on initial load
+    setupAboutViewMore();
 });
+
+function setupAboutViewMore() {
+    const viewMoreBtn = document.getElementById('view-more-about-btn');
+    const moreText = document.getElementById('more-about-text');
+
+    if (viewMoreBtn && moreText) {
+        viewMoreBtn.addEventListener('click', () => {
+            const isHidden = moreText.style.display === 'none' || moreText.style.display === '';
+            if (isHidden) {
+                moreText.style.display = 'inline'; // Or 'block' if it should be on a new line
+                viewMoreBtn.textContent = 'View Less';
+            } else {
+                moreText.style.display = 'none';
+                viewMoreBtn.textContent = 'View More';
+            }
+        });
+    }
+}
 
 function setupVideoPlayback(playButton, video) {
     // Preload video metadata but don't start loading video content until play is clicked
