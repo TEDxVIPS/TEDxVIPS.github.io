@@ -1,31 +1,49 @@
 <div class="about-section">
     <div class="container">
-        <div class="section-title">
-            <h2>About TEDx</h2>
-        </div>
-        
-        <div class="about-grid">
-            <div class="about-text">
-                <p class="large-text">
-                    TEDx is a grassroots initiative, created in the spirit of TED’s overall mission to research and discover “ideas worth spreading.” TEDx events are independently organized under a free license granted by TED, bringing people together to share a TED-like experience. These local, self-organized events feature a combination of live presenters and TED Talk videos, designed to spark deep discussion, connection, and inspiration within local communities.
-                    <span id="more-about-text" class="more-text" style="display: none;">The TEDx program aims to foster learning, inspire innovation, and provoke conversations that matter on a local scale, thereby extending the global impact of TED's vision. While TED provides general guidance for the TEDx program, individual TEDx events, including ours, are self-organized and operate independently, adhering to a framework that ensures a consistent, high-quality experience for attendees worldwide.</span>
-                </p>
-                <button id="view-more-about-btn" class="btn btn-secondary">View More</button>
-            </div>
-            
-            <div class="about-video">
-                <div class="video-container">
-                    <video id="aboutVideo" class="video-placeholder" poster="assets/images/video-placeholder.jpg" controls>
-                        <source src="assets/video/vips teaser.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="custom-play-button" id="playButton">
+        <div class="about-layout-grid">
+            <!-- Column 1: Image and Video Trigger (was 'Right Column') -->
+            <div class="about-image-column-wrapper">
+                <div class="about-image-interactive-area">
+                    <img src="assets/images/Concert zip/2bc7b88f-5de6-4810-a457-9d9a5ba5f4fb.JPG" alt="About TEDxVIPS Visual" class="about-display-image">
+                    <div class="image-play-button" id="imagePlayButton">
                         <svg fill="#ffffff" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"/>
                         </svg>
                     </div>
                 </div>
-               
+                <div class="decorative-patterns">
+                    <span class="pattern pattern-heart p1">♥</span>
+                    <span class="pattern pattern-star p2">★</span>
+                    <span class="pattern pattern-heart p3">♥</span>
+                    <span class="pattern pattern-star p4">☆</span>
+                  
+                </div>
+            </div>
+
+            <!-- Title (Part of former 'Left Column: Text Content') -->
+            <h1 class="about-section-main-title">About <span class="ted-highlight">TED</span><span class="tedx-char-highlight">x</span></h1>
+            
+            <!-- Main Paragraphs (Part of former 'Left Column: Text Content') -->
+            <div class="about-main-content">
+                <p class="about-text-standard">
+                    TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. At a TEDx event, TED Talks videos and live speakers combine to spark deep discussion and connection. These events are branded TEDx, where x = independently organized TED event, operating under a free license granted by TED.
+                </p>
+                <p class="about-text-stylish">
+                    "Our goal is to provide a platform for thinkers, visionaries, and learners, fostering a community dedicated to the power of ideas."
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal-overlay" style="display: none;">
+        <div class="video-modal-content">
+            <span class="close-modal-btn" id="closeVideoModalBtn">&times;</span>
+            <div class="video-container">
+                <video id="aboutVideo" class="video-placeholder" poster="assets/images/video-placeholder.jpg">
+                    <source src="assets/video/vips teaser.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </div>
