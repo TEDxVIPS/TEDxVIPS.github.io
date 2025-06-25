@@ -39,14 +39,6 @@ function initHeader() {
                 link.setAttribute('href', `../index.html${href}`);
             }
         });
-        // Also update the Register button if it's a link to a section
-        const registerBtn = mainNav.querySelector('.register-btn');
-        if (registerBtn) {
-            const regHref = registerBtn.getAttribute('href');
-             if (regHref && regHref.startsWith('#')) {
-                registerBtn.setAttribute('href', `../index.html${regHref}`);
-            }
-        }
         // Update the logo link to point to the main index page
         const logoLink = document.querySelector('.logo a');
         if (logoLink) {
