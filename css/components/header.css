@@ -116,23 +116,6 @@
     width: 70%;
 }
 
-.register-btn {
-   
-    color: #fff;
-    padding: 8px 24px;
-    border-radius: 30px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    border: 2px solid #EB0028;
-}
-
-.register-btn:hover {
-    background-color: transparent;
-    color: #EB0028;
-}
-
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -174,39 +157,6 @@
     display: block;
     opacity: 1;
 }
-
-/* Styles for the register button with logo */
-.btn-register {
-    padding: 6px 13px; 
-    display: inline-flex; 
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border: 1px solid rgba(235, 0, 40, 0.7); /* Slightly transparent border */
-    border-radius: 50px; 
-    color: #fff; 
-    text-decoration: none;
-    /* Add transform to transition */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; 
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px);
-}
-
-.btn-register:hover {
-    background-color: var(--tedx-red); /* Solid red background on hover */
-    color: #fff; 
-    border-color: var(--tedx-red); /* Solid border on hover */
-    transform: scale(1.05); /* Add scale effect on hover */
-}
-
-.register-logo {
-    height: 24px; 
-    width: auto; 
-    display: block; 
-    /* Optional: Add filter for hover if needed, e.g., brightness */
-    /* transition: filter 0.3s ease; */
-}
-
 
 /* Mobile Responsive Styles */
 @media (max-width: 992px) {
@@ -326,24 +276,6 @@
     .nav-item.mobile-only {
         display: none;
         margin-top: 20px;
-    }
-    
-    .mobile-only .register-btn {
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-        padding: 15px;
-        font-size: 16px;
-    }
-
-    .btn-register {
-        padding: 4px 10px; 
-        border-width: 1px; 
-        /* Backdrop filter will be inherited */
-    }
-
-    .register-logo {
-        height: 22px; 
     }
     
     /* Prevent body scroll when menu is open */
