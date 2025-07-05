@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tedxvips.com/sitemap.xml
+
+# Disallow access to certain directories (optional)
+Disallow: /css/
+Disallow: /js/
+Disallow: /assets/images/Concert*
+Disallow: /components/
+
+# Allow important assets
+Allow: /assets/images/logos/
+Allow: /assets/images/SPEAKERS*/
+Allow: /assets/images/faculty/
+Allow: /assets/images/team/
+Allow: /assets/images/Sponsors/
+Allow: /assets/images/main/
+
+# Crawl delay (optional - adjust as needed)
+Crawl-delay: 1
