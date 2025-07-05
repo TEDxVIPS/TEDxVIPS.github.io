@@ -97,6 +97,13 @@
     opacity: 0.9;
 }
 
+/* Address link hover effect */
+.footer-contact a:hover p {
+    color: #EB0028;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
 /* Footer bottom section */
 .footer-bottom {
     display: flex;

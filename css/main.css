@@ -191,25 +191,24 @@ section::after {
 .event-meta {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
+    align-items: center;
     margin-bottom: 40px;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: 2px;
+    text-align: center;
+}
+
+.event-date {
+    font-weight: 700;
 }
 
 /* Event details section styling */
 #event-details {
     background-color: #000; 
-    /* Remove this negative margin */
     padding-top: 30px; 
     border-top: none; 
     position: relative;
     z-index: 5; 
-}
-
-.event-date, .event-location, .event-time {
-    font-weight: 700;
 }
 
 .btn-large {
