@@ -1,5 +1,29 @@
 const speakers = [
     {
+        name: "Vijender Chauhan",
+        title: "Associate Professor & UPSC Mentor",
+        bio: "Dr. Vijender Singh Chauhan an Associate Professor at Zakir Husain Delhi College and a renowned UPSC mock interview expert. Known for his insightful guidance, he has mentored aspirants for over two decades.",
+        image: "assets/images/SPEAKERS 24/VIJENDER CHAUHAN - 2024.png",
+        featured: true,
+        topics: [],
+        year: 2024,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/vijendermasijeevi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        }
+    },
+    {
+        name: "Vikas Swaroop",
+        title: "Diplomat & Author",
+        bio: "Vikas Swarup is a former Indian diplomat and author of Q & A, which inspired Slumdog Millionaire. He also served as India's High Commissioner to Canada.",
+        image: "assets/images/SPEAKERS 24/VIKAS SWAROOP - 2024.png",
+        featured: false,
+        topics: [],
+        year: 2024,
+        socialLinks: {
+            linkedin: "https://www.linkedin.com/in/vikas-swarup-184703213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        }
+    },
+    {
         name: "Piyush Mishra",
         title: "Actor, Poet & Musician",
         bio: "Piyush Mishra is an acclaimed actor, lyricist, singer, and playwright. He won the Zee Cine Award for Best Dialogue for The Legend of Bhagat Singh (2003) and the Stardust Award for Music Director for Gulaal (2010). His musical ensemble, Ballimaaraan, is also well-known.",
@@ -75,30 +99,7 @@ const speakers = [
             instagram: "https://www.instagram.com/vidisha_baliyan?igsh=MWs4aDlvY3B5bGg5ZA=="
         }
     },
-    {
-        name: "Vijender Chauhan",
-        title: "Associate Professor & UPSC Mentor",
-        bio: "Dr. Vijender Singh Chauhan an Associate Professor at Zakir Husain Delhi College and a renowned UPSC mock interview expert. Known for his insightful guidance, he has mentored aspirants for over two decades.",
-        image: "assets/images/SPEAKERS 24/VIJENDER CHAUHAN - 2024.png",
-        featured: true,
-        topics: [],
-        year: 2024,
-        socialLinks: {
-            linkedin: "https://www.linkedin.com/in/vijendermasijeevi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-        }
-    },
-    {
-        name: "Vikas Swaroop",
-        title: "Diplomat & Author",
-        bio: "Vikas Swarup is a former Indian diplomat and author of Q & A, which inspired Slumdog Millionaire. He also served as India’s High Commissioner to Canada.",
-        image: "assets/images/SPEAKERS 24/VIKAS SWAROOP - 2024.png",
-        featured: false,
-        topics: [],
-        year: 2024,
-        socialLinks: {
-            linkedin: "https://www.linkedin.com/in/vikas-swarup-184703213?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-        }
-    },
+  
     {
         name: "Aman Dhattarwal",
         title: "Educator & Entrepreneur",
