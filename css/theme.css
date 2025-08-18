@@ -17,6 +17,14 @@
     /* Typography */
     --font-primary: 'Roboto', sans-serif;
     --font-secondary: 'Georgia', serif;
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+
+    /* Font sizes */
+    --font-size-h1: 3.5rem;
+    --font-size-h2: 2.5rem;
+    --font-size-h3: 1.75rem;
+    --font-size-body: 1rem;
     
     /* Spacing */
     --spacing-xs: 8px;
@@ -25,6 +33,14 @@
     --spacing-lg: 32px;
     --spacing-xl: 48px;
     --spacing-xxl: 64px;
+
+    /* Buttons */
+    --btn-primary-bg: var(--tedx-red);
+    --btn-primary-hover-bg: var(--tedx-dark-red);
+    --btn-secondary-bg: var(--dark-gray);
+    --btn-secondary-hover-bg: var(--medium-gray);
+    --btn-padding: 12px 24px;
+    --btn-border-radius: 5px;
 }
 
 body {
@@ -39,7 +55,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: var(--font-primary);
+    font-family: var(--font-heading);
     color: var(--text-on-dark);
     font-weight: 900;
     margin-top: 0;
@@ -48,40 +64,62 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: var(--font-size-h1);
 }
 
 h2 {
-    font-size: 2.8rem;
-    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-h2);
 }
 
 h3 {
-    font-size: 2rem;
-    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-h3);
 }
 
-a {
-    color: var(--tedx-red);
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-title h2 {
+    font-size: var(--font-size-h2);
+    color: var(--text-on-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.section-dark .section-title h2 {
+    color: var(--text-on-dark);
+}
+
+.section-light .section-title h2 {
+    color: var(--text-on-light);
+}
+
+.btn {
+    display: inline-block;
+    padding: var(--btn-padding);
+    border-radius: var(--btn-border-radius);
     text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
 }
 
-a:hover {
-    color: var(--tedx-dark-red);
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--white);
 }
 
-p {
-    margin-bottom: var(--spacing-md);
-    font-size: 1rem;
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover-bg);
 }
 
-.container {
-    max-width: 1200px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 0 var(--spacing-md);
+.btn-secondary {
+    background-color: var(--btn-secondary-bg);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--btn-secondary-hover-bg);
 }
 
 /* Section styling for alternating backgrounds */
@@ -103,68 +141,6 @@ p {
 .section-light h2,
 .section-light h3 {
     color: var(--black);
-}
-
-/* Button styles with minimal design */
-.btn {
-    display: inline-block;
-    background-color: var(--tedx-red);
-    color: var(--white);
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background-color: var(--white);
-    color: var(--tedx-red);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    border: 2px solid var(--tedx-red);
-    color: var(--tedx-red);
-}
-
-.btn-secondary:hover {
-    background-color: var(--tedx-red);
-    color: var(--white);
-}
-
-/* Section headers with minimal design */
-.section-title {
-    text-align: center;
-    margin-bottom: var(--spacing-xl);
-}
-
-.section-title h2 {
-    position: relative;
-    display: inline-block;
-    padding-bottom: var(--spacing-sm);
-}
-
-.section-title h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 4px;
-    background-color: var(--tedx-red);
-}
-
-.section-title.centered h2::after {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.section-light .section-title h2::after {
-    background-color: var(--tedx-red);
 }
 
 /* Image styling */
