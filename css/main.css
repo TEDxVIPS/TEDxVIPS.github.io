@@ -4,21 +4,6 @@
     padding: 0;
 }
 
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #fff;
-    background-color: #000;
-    padding-top: 70px; /* Keep this for fixed header */
-}
-
-h1, h2, h3 {
-    margin: 0;
-    padding: 0;
-    font-weight: 900;
-    letter-spacing: -0.02em;
-}
 
 /* Container styles */
 .container {
@@ -26,6 +11,11 @@ h1, h2, h3 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+/* Section padding */
+.section-dark, .section-light {
+    padding: var(--spacing-xxl) 0;
 }
 
 /* Header specific styles */
