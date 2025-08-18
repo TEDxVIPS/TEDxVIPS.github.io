@@ -4,9 +4,6 @@
     padding: 0;
 }
 
-body {
-    padding-top: 70px; /* Keep this for fixed header */
-}
 
 /* Container styles */
 .container {
