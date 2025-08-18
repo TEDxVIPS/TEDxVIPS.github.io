@@ -341,3 +341,18 @@ html {
     margin-bottom: 0;
     padding-bottom: 0;
 }
+
+.btn {
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.btn:hover, .btn:focus {
+    box-shadow: 0 2px 8px rgba(235,0,40,0.15);
+    filter: brightness(1.05);
+}
+a {
+    transition: color 0.3s, text-decoration 0.3s;
+}
+a:hover, a:focus {
+    color: var(--tedx-red);
+    text-decoration: underline;
+}
