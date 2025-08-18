@@ -101,14 +101,16 @@
     font-size: 15px;
 }
 
+/* Fancy font for hero tagline */
 .hero-tagline {
-    font-size: 1.6rem; /* Changed from 1.8rem */
-    margin: 0 0 30px; /* Adjusted top margin from 15px to 0 */
-    font-weight: 400; /* Changed from 300 */
-    letter-spacing: 0.5px; /* Changed from 1px */
-    opacity: 1; /* Changed from 0.9 */
-    font-family: 'Montserrat', sans-serif; /* Changed from 'Playfair Display', serif */
-    color: #fff; 
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    margin-top: 18px;
+    margin-bottom: 0;
     position: relative; 
 }
 
@@ -152,8 +154,32 @@
 
 @media (max-width: 768px) {
     .hero {
-        height: 80vh; 
-        margin-top: -60px; 
+        margin-top: 56px !important;
+        height: calc(100vh - 56px) !important;
+        min-height: calc(100vh - 56px) !important;
+        padding: 0 !important;
+        position: relative !important;
+    }
+    .hero-video {
+        position: relative !important;
+        width: 100vw !important;
+        height: 100% !important;
+        min-width: 100vw !important;
+        min-height: 100% !important;
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        display: block !important;
+    }
+    .hero-overlay {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100% !important;
+        padding: 0 10px !important;
     }
     
     .tedx-logo {
@@ -227,3 +253,25 @@
         padding: 15vh 10px 0; /* Further adjust vertical positioning */
     }
 }
+    @media (max-width: 768px) {
+        .hero {
+            margin-top: 30px !important; /* Adjust to your header height */
+            height: calc(100vh - 56px) !important;
+            min-height: calc(100vh - 5px) !important;
+            padding: 0 !important;
+            position: relative !important;
+        }
+        .hero-video {
+            position: relative !important;
+            width: 100vw !important;
+            height: 100% !important;
+            min-width: 100vw !important;
+            min-height: 100% !important;
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+            left: auto !important;
+            top: auto !important;
+            transform: none !important;
+            display: block !important;
+        }
+    }
