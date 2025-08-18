@@ -451,7 +451,7 @@ function displaySpeakers(filter) {
 
         speakerCard.innerHTML = `
             <div class="speaker-image-container">
-                <img src="${imagePath}" alt="${speaker.name}" class="speaker-image" onerror="this.onerror=null; this.src='${placeholderImageUrl}';">
+                <img src="${imagePath}" loading="lazy" alt="${speaker.name} - ${speaker.title}" class="speaker-image" onerror="this.onerror=null; this.src='${placeholderImageUrl}';">
             </div>
             <div class="speaker-details">
                 <h3 class="speaker-name">${speaker.name}</h3>

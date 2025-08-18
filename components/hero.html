@@ -1,9 +1,10 @@
 <div class="hero">
     <!-- Video with poster image but no src initially -->
-    <video class="hero-video" muted playsinline poster="assets/images/hero-poster.jpg">
+    <video class="hero-video" muted playsinline poster="assets/images/hero-poster.jpg" preload="none">
         <source data-src="assets/video/hero.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+    <img src="assets/images/hero-poster.jpg" loading="lazy" alt="TEDxVIPS Hero Poster" style="display:none;" />
     <div class="hero-overlay">
         <div class="hero-content">
             <div class="tedx-logo">

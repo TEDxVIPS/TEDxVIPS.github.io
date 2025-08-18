@@ -30,6 +30,7 @@
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    margin-top: 0;
 }
 
 /* Hero section styles */
@@ -334,12 +335,24 @@ html {
         margin-bottom: 30px; /* Further adjust bottom margin */
     }
 
-    /* Mascot Section Responsive */
-    #mascot-section {
-        padding: 30px 0; /* Further adjust padding */
-    }
+}
 
-    .mascot-image {
-        max-width: 120px; /* Adjust size for extra small devices */
-    }
+#sponsors, .section-light#sponsors {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.btn {
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.btn:hover, .btn:focus {
+    box-shadow: 0 2px 8px rgba(235,0,40,0.15);
+    filter: brightness(1.05);
+}
+a {
+    transition: color 0.3s, text-decoration 0.3s;
+}
+a:hover, a:focus {
+    color: var(--tedx-red);
+    text-decoration: underline;
 }
